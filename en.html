@@ -10,8 +10,12 @@
   <meta content="" name="keywords">
   
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="assets/favicon.ico">
   
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,12 +55,12 @@
             <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
             <li><a class="nav-link scrollto" href="#about">About</a></li>
             <li><a class="nav-link scrollto" href="#services">Services</a></li>
-            <li><a class="nav-link scrollto " href="#work">Work</a></li>
+            <li><a class="nav-link scrollto" href="#certificaciones">Certifications</a></li>
             <li class="dropdown"><a href="#projects"><span>Projects</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
-                <li><a href="#">RIVERA SOFT</a></li>
-                <li><a href="#">TUUM</a></li>
-                <li><a href="#">G-ZONE UNICARIBE</a></li>
+                <li><a href="#rivierasoft">RIVERA SOFT</a></li>
+                <li><a href="#gzone">G-ZONE UNICARIBE</a></li>
+                <li><a href="#tuum">TUUM</a></li>
               </ul>
             </li>
             <li><a class="nav-link scrollto" href="/">Es</a></li>
@@ -220,19 +224,20 @@
         </div>
       </section><!-- End Services Section -->
             <!-- ======= Awards Section ======= -->
-            <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
-              <div class="overlay-mf"></div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="testimonial-box text-center">
-                      <h3 class="title-a">
-                        Certifications
-                      </h3>
-                      <div class="line-mf"></div>
-                    </div>
+            <div id="certificaciones" class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="testimonial-box text-center">
+                    <h3 class="title-a">
+                      Certifications
+                    </h3>
+                    <div class="line-mf"></div>
                   </div>
                 </div>
+              </div>
+              <div class="overlay-mf"></div>
+              <div class="container">
+                
                 <div class="row">
                   <div class="col-md-12">
                     
@@ -268,7 +273,7 @@
             
       
       <!-- ======= Portfolio Section ======= -->
-      <section id="work" class="portfolio-mf sect-pt4 route">
+      <section id="projects" class="portfolio-mf sect-pt4 route">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -285,9 +290,9 @@
           </div>
           <div class="row">
             <div class="col-md-4">
-              <div class="card card-blog">
+              <div class="card card-blog" id="rivierasoft">
                 <div class="card-img">
-                  <a href="/riviera-page"><img src="assets/img/rivierasoft.png" alt="" class="img-fluid"></a>
+                  <a href="/riviera"><img src="assets/img/rivierasoft.png" alt="" class="img-fluid"></a>
                 </div>
                 <div class="card-body">
                   <div class="card-category-box">
@@ -312,7 +317,7 @@
             </div>
             
             <div class="col-md-4">
-              <div class="card card-blog">
+              <div class="card card-blog" id="gzone">
                 <div class="card-img">
                   <a href="https://gzone.pythonanywhere.com/"><img src="assets/img/gzone.jpg" alt="" class="img-fluid"></a>
                 </div>
@@ -338,7 +343,7 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="card card-blog">
+              <div class="card card-blog" id="tuum">
                 <div class="card-img">
                   <a href="blog-single.html"><img src="assets/img/tuum.png" alt="" class="img-fluid"></a>
                 </div>
