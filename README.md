@@ -2,4 +2,7 @@
 Repositorio para mi portafolio.
 
 
-Se utilizo el template Startbootstrap Resume que puede ser encontrado [Aquí](https://github.com/startbootstrap/startbootstrap-resume)
+Template Name: DevFolio
+Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+Author: BootstrapMade.com
+License: https://bootstrapmade.com/license/
