@@ -15,11 +15,20 @@
 
   .crumbs-active
   {
-    @apply absolute w-auto top-0 p-2 ml-14 min-w-max  rounded-r-sm text-neutral bg-secondary text-xs font-bold transition-all duration-100 origin-left cursor-pointer;
+    @apply w-auto top-0 left-0 p-2 ml-14 min-w-max  rounded-r-sm text-neutral bg-secondary text-xs font-bold transition-all duration-75 origin-left cursor-pointer;
 
   }
 
-  .crumbs-active{
-    
+  .crumbs{
+    @apply  w-auto top-0 left-0 p-2 ml-[4rem] p-2 min-w-max rounded-r-sm text-neutral bg-secondary text-xs font-bold transition-all duration-100 origin-left cursor-pointer;
+
+  }
+
+  .sidebar-active{
+    @apply left-0;
+  }
+
+  .sidebar-inactive{
+    @apply left-[-4rem];
   }
 }
