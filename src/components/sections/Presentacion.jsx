@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
+import { socials } from '../../constants';
 
 function Presentacion() {
     const words = ["Backend Developer", "Django", 'Python', 'GameDev', 'Ingeniero en Datos'];
@@ -48,7 +49,7 @@ function Presentacion() {
 
 
     return (
-        <>
+        <section>
             <div className='flex flex-col sm:flex-row w-screen h-screen bg-cover bg-center relative' style={{ backgroundImage: "url('assets/images/overlay-bg.jpg')"}}>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
                 <div className="flex w-full sm:w-4/6 justify-center items-center">
@@ -59,7 +60,7 @@ function Presentacion() {
                             transition={{ duration: 1 }}
                             className=''
                         >
-                            <span className='text-8xl' >¡HOLA! SOY NOE </span>
+                            <p className='text-8xl' >¡HOLA! SOY NOE </p>
                             <p className='text-5xl'>
                                 {currentWord.slice(0, letterIndex)}
                             </p>
@@ -78,9 +79,27 @@ function Presentacion() {
                     </motion.div>
                 </div>
             </div>
+            <div className='hidden md:flex md:flex-col absolute right-0 top-[30%] bg-secondary rounded-l-xl'>
+                {
+                    socials.map((social,index) => <SocialButtons key={`social-${index}`} social={social}/>)
+                }
+            </div>
 
-        </>
+        </section>
     )
+}
+
+function SocialButtons({social})
+{
+    return (
+        <a className='flex bg-secondary group' href={social.url} target='_blank'>
+            {<social.icon size={50} />}
+            <span className='social-tooltip group-hover:scale-100'>
+                {social.text}
+            </span>
+        </a>
+
+    );
 }
 
 export default Presentacion

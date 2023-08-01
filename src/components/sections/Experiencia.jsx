@@ -11,15 +11,15 @@ import { motion } from "framer-motion";
 
 function Experiencia() {
     return (
-        <div className='flex flex-col'>
-            <motion.div >
-                <p className={` text-center`}>
-                    En que he trabajado?
-                </p>
-                <h2 className={` text-center`}>
-                    Experiencia Laboral.
+        <section id='work-experience' className='flex flex-col pattern'>
+            <div className='mb-5'>
+                <h1 className="text-center text-4xl separator-line">
+                    Experiencia Laboral
+                </h1>
+                <h2 className='text-center text-2xl font-light'>
+                    Aqui encontraras información acerca de mi experiencia laboral.
                 </h2>
-            </motion.div>
+            </div>
 
             <div className='mt-20 flex flex-col'>
                 <VerticalTimeline>
@@ -33,7 +33,7 @@ function Experiencia() {
                     }
                 </VerticalTimeline>
             </div>
-        </div>
+        </section>
     )
 }
 
@@ -88,13 +88,10 @@ function TimeLineObject({ company }) {
             <div className='flex flex-wrap'>
                 {
                     company.tech.map((tech, index) => (
-                        <div
+                        <CompanyTech
                             key={`tech-${index}-company-${company.company_name}`}
-                            className={`flex flex-row ${tech.bgcolor} rounded-lg m-2 p-2 items-center hover:shadow-xl cursor-pointer`}
-                        >
-                            {<tech.icon className='mr-1' />}
-                            {tech.name}
-                        </div>
+                            tech={tech}
+                        />
                     ))
                 }
             </div>
@@ -103,4 +100,16 @@ function TimeLineObject({ company }) {
 
 }
 
+function CompanyTech({ tech }) {
+    return (
+        <div
+            className={`flex flex-row ${tech.bgcolor} rounded-lg m-2 p-2 items-center hover:shadow-xl cursor-pointer`}
+        >
+            {<tech.icon className='mr-1' />}
+            {tech.name}
+        </div>
+    );
+}
+
+export { CompanyTech };
 export default Experiencia

@@ -12,6 +12,11 @@
   {
     @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-neutral bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
   }
+  
+  .social-tooltip
+  {
+    @apply absolute w-auto p-2 min-w-max right-14 rounded-md shadow-md text-neutral bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-right;
+  }
 
   .crumbs-active
   {
@@ -20,7 +25,7 @@
   }
 
   .crumbs{
-    @apply  w-auto top-0 left-0 p-2 ml-[4rem] p-2 min-w-max rounded-r-sm text-neutral bg-secondary text-xs font-bold transition-all duration-100 origin-left cursor-pointer;
+    @apply  w-auto top-0 left-0 p-2 ml-[4rem] min-w-max rounded-r-sm text-neutral bg-secondary text-xs font-bold transition-all duration-100 origin-left cursor-pointer;
 
   }
 
@@ -31,4 +36,19 @@
   .sidebar-inactive{
     @apply left-[-4rem];
   }
+
+  .separator-line
+  {
+    @apply after:mx-auto after:content-[''] after:block after:h-2 after:rounded-full after:w-10 after:my-2 after:bg-complementary;
+  }
+  .separator-line-project
+  {
+    @apply after:mx-auto after:content-[''] after:block after:h-1 after:rounded-full after:w-40 after:my-2 after:bg-neutral;
+  }
+}
+
+
+.pattern{
+    background: url('/assets/images/pattern.png') no-repeat center center fixed;
+    background-size: cover;
 }

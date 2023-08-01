@@ -3,8 +3,9 @@ import { SidebarContext } from '../context/SidebarContext'
 import Presentacion from './sections/Presentacion'
 import Descripcion from './sections/Descripcion'
 import Contacto from './sections/Contacto'
-import Placeholder from './sections/Placeholder'
 import Experiencia from './sections/Experiencia'
+import Proyectos from './sections/Proyectos'
+import Certificaciones from './sections/Certificaciones'
 
 
 function Content() {
@@ -15,9 +16,9 @@ function Content() {
             <Presentacion />
             <Descripcion/>
             <Experiencia/>
-            <Placeholder/>
-            <Placeholder/>
-            <Placeholder/>
+            <Certificaciones/>
+            <Proyectos/>
+            <Contacto/>
         </div>
     )
 }

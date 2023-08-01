@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { SidebarContext } from '../context/SidebarContext'
 import { GiCharacter, GiBlackBook, GiSkills, GiConcreteBag, GiComputing, GiMailbox } from 'react-icons/gi'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
-
+import { HashLink } from 'react-router-hash-link';
 
 
 
@@ -36,12 +36,14 @@ function Crumbs() {
 
 function SidebarIcon({ icon, reference, text }) {
   return (
-    <div className='sidebar-icon group' href={reference}>
-      {icon}
-      <span className='sidebar-tooltip group-hover:scale-100'>
-        {text}
-      </span>
-    </div>
+    <HashLink smooth to={reference}>
+      <div className='sidebar-icon group' href={reference}>
+        {icon}
+        <span className='sidebar-tooltip group-hover:scale-100'>
+          {text}
+        </span>
+      </div>
+    </HashLink>
   )
 }
 

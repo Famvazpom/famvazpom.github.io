@@ -13,6 +13,7 @@ export default {
           neutral: '#f7f7ff',
           complementary: '#3626a7',
           fill: '#657ed4',
+          par: '#3b403e',
         },
       },
   },
