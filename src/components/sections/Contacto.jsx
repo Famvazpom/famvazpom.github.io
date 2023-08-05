@@ -68,7 +68,7 @@ function Contacto() {
         </h1>
       </div>
       <div className='flex flex-col sm:flex-row p-8 '>
-        <div className="px-40 w-full  ">
+        <div className="sm:px-40 w-full  ">
           <form
             ref={formRef}
             onSubmit={handleSubmit}
