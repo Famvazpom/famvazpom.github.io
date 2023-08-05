@@ -20,6 +20,19 @@ import {
     MdOutlineWebAsset
 } from 'react-icons/md'
 
+import {
+    GiArtificialIntelligence,
+} from 'react-icons/gi'
+
+import {
+    SiPandas,
+    SiNumpy,
+    SiKeras,
+    SiTensorflow,
+    SiCplusplus,
+    SiCsharp
+} from 'react-icons/si'
+
 const work_xp = [
     {
         title: "Asistente de Ingenieria",
@@ -175,6 +188,57 @@ const work_xp = [
             "Mantenimiento y restauración de Equipos."
         ],
     },
+    {
+        title: "Estudiante de Ingenieria en Datos",
+        company_name: "Universidad del Caribe",
+        image: 'assets/images/LOGO-UNICARIBE.png',
+        date: "Agosto 2016 - Diciembre 2023",
+        tech: [
+            {
+                name: "Python",
+                icon: BiLogoPython,
+                bgcolor: "bg-green-500",
+            },
+            {
+                name: "IA",
+                icon: GiArtificialIntelligence,
+                bgcolor: "bg-primary",
+            },
+            {
+                name: "Pandas",
+                icon: SiPandas,
+                bgcolor: "bg-blue-700",
+            },
+            {
+                name: "Numpy",
+                icon: SiNumpy,
+                bgcolor: "bg-blue-400",
+            },
+            {
+                name: "Tensorflow",
+                icon: SiTensorflow,
+                bgcolor: "bg-orange-600",
+            },
+            {
+                name: "Keras",
+                icon: SiKeras,
+                bgcolor: "bg-red-600",
+            },
+            {
+                name: "C++",
+                icon: SiCplusplus,
+                bgcolor: "bg-blue-600",
+            },
+
+        ],
+        points: [
+            "Estudiante de la carerra Ingenieria en Datos.",
+            "Machine Learning.",
+            "Ananlisis de Datos.",
+            "Inteligencia Artificial",
+            "Procesos ETL",
+        ],
+    },
 
 ];
 
@@ -248,6 +312,42 @@ const techs = [
         icon: BiLogoUnity,
         bgcolor: "bg-gray-600",
     },
+    {
+        name: "IA",
+        icon: GiArtificialIntelligence,
+        bgcolor: "bg-primary",
+    },
+    {
+        name: "Pandas",
+        icon: SiPandas,
+        bgcolor: "bg-blue-700",
+    },
+    {
+        name: "Numpy",
+        icon: SiNumpy,
+        bgcolor: "bg-blue-400",
+    },
+    {
+        name: "Tensorflow",
+        icon: SiTensorflow,
+        bgcolor: "bg-orange-600",
+    },
+    {
+        name: "Keras",
+        icon: SiKeras,
+        bgcolor: "bg-red-600",
+    },
+    {
+        name: "C++",
+        icon: SiCplusplus,
+        bgcolor: "bg-blue-600",
+    },
+    {
+        name: "C#",
+        icon: SiCsharp,
+        bgcolor: "bg-blue-600",
+    },
+
 ]
 
 const certifications = [
