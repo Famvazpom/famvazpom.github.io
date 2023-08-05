@@ -45,6 +45,14 @@ function Descripcion() {
           <div className='flex flex-wrap'>
             {techs.map((tech, index) => <TechBullet key={`tech-${index}`} tech={tech} />)}
           </div>
+          <div className='flex flex-col mt-3'>
+            <p>
+              <span className='font-bold'>Mi correo: </span> famvazpom@gmail.com
+            </p>
+            <p>
+              <span className='font-bold'>Mi telefono: </span> +52 984 280 0369
+            </p>
+          </div>
         </div>
 
       </div>
