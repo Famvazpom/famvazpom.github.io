@@ -17,7 +17,6 @@ function Sidebar() {
       <SidebarIcon icon={<GiBlackBook size="32" />} reference='#work-experience' text='Experiencia Laboral' />
       <SidebarIcon icon={<GiSkills size="32" />} reference='#certificates' text='Certificaciones' />
       <SidebarIcon icon={<GiConcreteBag size="32" />} reference='#projects' text='Proyectos' />
-      <SidebarIcon icon={<GiComputing size="32" />} reference='#programming' text='Lenguajes y Frameworks' />
       <SidebarIcon icon={<GiMailbox size="32" />} reference='#contact' text='Contacto' />
     </div>
   )
