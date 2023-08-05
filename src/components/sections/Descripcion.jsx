@@ -1,5 +1,6 @@
 import React from 'react'
 import { techs } from '../../constants'
+import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 
 
@@ -31,11 +32,17 @@ function Descripcion() {
           <p>
             Si tiene una oferta en que conicida con mis habilidades y experiencia, no dude en <span className='font-bold'> contactarme. </span>
           </p>
-
-          <div className='bg-complementary text-2xl w-fit p-2 mt-2 rounded-md shadow-md hover:shadow-2xl cursor-pointer '>
-            <HashLink smooth to="#contact" className='hover:text-neutral' >
-              Contacto
-            </HashLink>
+          <div className='flex flex-row'>
+            <div className='bg-complementary text-2xl w-fit p-2 mt-2 mx-2 rounded-md shadow-md hover:shadow-2xl cursor-pointer '>
+              <HashLink smooth to="#contact" className='hover:text-neutral' >
+                Contacto
+              </HashLink>
+            </div>
+            <div className='bg-complementary text-2xl w-fit p-2 mt-2 mx-2 rounded-md shadow-md hover:shadow-2xl cursor-pointer '>
+              <Link to="/Noe Vazquez - CV.pdf" target="_blank" download className='hover:text-neutral m-2' >
+                Descarga mi CV
+              </Link>
+            </div>
           </div>
         </div>
         <div className='flex flex-wrap flex-col w-full sm:w-1/2 p-2'>

@@ -1,7 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import { BrowserRouter } from 'react-router-dom'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 import Sidebar from './components/Sidebar'
