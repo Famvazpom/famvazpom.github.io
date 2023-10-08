@@ -35,7 +35,7 @@ function Contacto() {
           from_name: form.name,
           to_name: "Noe Vázquez",
           from_email: form.email,
-          to_email: "famvazpom@gmail.com",
+          to_email: "noevazquez@famvazpom.tech",
           message: form.message,
         },
         import.meta.env.VITE_EMAIL_PUBLIC_API_KEY
