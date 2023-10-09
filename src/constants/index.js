@@ -416,7 +416,7 @@ const projects = [
         links: [
             {
                 icon: MdOutlineWebAsset,
-                link: 'https://famvazpom.github.io/rivierasoft-page',
+                link: 'https://rivierasoftpage.famvazpom.tech/',
                 name: 'Página Web'
             },
         ]
