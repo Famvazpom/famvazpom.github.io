@@ -17,7 +17,7 @@ function Descripcion() {
       </div>
       <div className='flex flex-col md:flex-row'>
         <div className='sm:w-1/2 p-5 leading-loose text-justify'>
-          <p className='mb-2'>Me llamo Noe Vazquez, soy <span className='font-bold'> Desarrolador Backend. </span></p>
+          <p className='mb-2'>Me llamo Noe Vazquez, soy <span className='font-bold'> Ingeniero en Datos y Desarrolador Backend. </span></p>
           <p className='mb-2'>
             Tengo experiencia en el desarrollo de aplicaciones web,
             he trabajado principalmente con el framework Django, con librerias como Django Rest Framework, HTML, CSS y un JavaScript.
@@ -39,7 +39,7 @@ function Descripcion() {
               </HashLink>
             </div>
             <div className='bg-complementary text-2xl w-fit p-2 mt-2 mx-2 rounded-md shadow-md hover:shadow-2xl cursor-pointer '>
-              <Link to="/Noe Vazquez - CV.pdf" target="_blank" download className='hover:text-neutral m-2' >
+              <Link to="/Noe Vazquez.pdf" target="_blank" download className='hover:text-neutral m-2' >
                 Descarga mi CV
               </Link>
             </div>

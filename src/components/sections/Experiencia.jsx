@@ -5,7 +5,6 @@ import {
     VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
-import { motion } from "framer-motion";
 
 
 
@@ -49,7 +48,7 @@ function TimeLineObject({ company }) {
             date={company.date}
             iconStyle={{ background: company.iconBg }}
             icon={
-                <div className='flex justify-center items-center w-full h-full'>
+                <div className='flex justify-center items-center w-full h-full rounded-full bg-white'>
                     <img
                         src={company.image}
                         alt={company.company_name}
@@ -73,12 +72,10 @@ function TimeLineObject({ company }) {
             <div className='pb-2 border-b-2'>
                 <ul className='mt-5 list-disc ml-5 space-y-2'>
                     {company.points.map((point, index) => (
-                        <li
-                            key={`experience-point-${index}`}
-                            className='text-white-100 text-[14px] pl-1 tracking-wider'
-                        >
-                            {point}
-                        </li>
+                         <CompanyPoint
+                         key={`point-${index}-company-${company.company_name}`}
+                         point={point}
+                     />
                     ))}
                 </ul>
             </div>
@@ -98,6 +95,26 @@ function TimeLineObject({ company }) {
         </VerticalTimelineElement>
     );
 
+}
+
+function CompanyPoint({ point }) {
+    if(Array.isArray(point))
+    {
+        return (
+            <ul className='text-white-100 text-[14px] pl-1 tracking-wider'>
+                {point.map((subpoint, index) => (
+                    <li className='text-white-100 text-[14px] pl-1 tracking-wider'>
+                        {subpoint}
+                    </li>
+                ))}
+            </ul>
+        );   
+    }
+    return (
+        <li className='text-white-100 text-[14px] pl-1 tracking-wider'>
+            {point}
+        </li>
+    );
 }
 
 function CompanyTech({ tech }) {

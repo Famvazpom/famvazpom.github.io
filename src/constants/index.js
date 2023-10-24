@@ -1,10 +1,10 @@
 import {
-    BiLogoPython, 
-    BiLogoDjango, 
-    BiLogoHtml5, 
-    BiLogoBootstrap, 
-    BiLogoJavascript, 
-    BiLogoCss3, 
+    BiLogoPython,
+    BiLogoDjango,
+    BiLogoHtml5,
+    BiLogoBootstrap,
+    BiLogoJavascript,
+    BiLogoCss3,
     BiLogoJquery,
     BiLogoLinkedinSquare,
     BiLogoDiscord,
@@ -77,13 +77,17 @@ const work_xp = [
             },
         ],
         points: [
-            "Desarrollo de sistema para control de gimnasios.",
-            "Mantenimiento de sistema.",
-            "Montaje de instancias.",
-            "Desarrollo de aplicaciones de Punto de Venta.",
+            "Desarrollo de sistema para control de gimnasios con Django para el control de membresias, seguimiento de reportes de maquinaria y reportes administrativos.",
+            [
+                "Mantenimiento de sistema.",
+                "Montaje de instancias.",
+                "Desarrollo de aplicaciones de Punto de Venta.",
+            ],
             "Soporte Técnico en:",
-            "Equipo de Computo",
-            "Equipo de Gimnasio",
+            [
+                "Equipo de Computo",
+                "Equipo de Gimnasio",
+            ],
             "Reparación y Mantenimiento de equipo electrónico."
         ],
     },
@@ -130,11 +134,13 @@ const work_xp = [
             },
         ],
         points: [
-            "Desarrollo de sistema para control de reparaciones.",
-            "Gestión de licencias.",
-            "Gestión de servidores.",
-            "Montaje de instancias.",
-            "Capacitación en uso de sistema.",
+            "Desarrollo de sistema para control de reparaciones desarrollado con Django para el seguimiento de ordenes de servicio, punto de venta y reportes administrativos.",
+            [
+                "Gestión de licencias.",
+                "Gestión de servidores.",
+                "Montaje de instancias.",
+                "Capacitación en uso de sistema.",
+            ],
         ],
     },
     {
@@ -180,12 +186,17 @@ const work_xp = [
             },
         ],
         points: [
-            "Diseño y desarrollo de sistema para control de tiendas de reparación de telefonía.",
-            "Capacitacion de sistema.",
-            "Soporte técnico.",
+            "Diseño y desarrollo de sistema para control de tiendas de reparación de telefonía usando Django y Django Rest Framework para el seguimiento de ordenes de servicio y reportes administrativos.",
+            [
+                "Capacitacion de sistema.",
+                "Soporte técnico.",
+                "Mantenimiento de sistema.",
+            ],
             "Mantenimiento de equipo de computo:",
-            "Creación de imagenes de S.O.",
-            "Mantenimiento y restauración de Equipos."
+            [
+                "Creación de imagenes de S.O.",
+                "Mantenimiento y restauración de Equipos."
+            ],
         ],
     },
     {
@@ -488,4 +499,4 @@ const projects = [
     },
 ]
 
-export { work_xp, socials,techs,certifications,projects };
+export { work_xp, socials, techs, certifications, projects };
