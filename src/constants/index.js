@@ -326,7 +326,7 @@ const techs = [
     {
         name: "IA",
         icon: GiArtificialIntelligence,
-        bgcolor: "bg-primary",
+        bgcolor: "bg-blue-950",
     },
     {
         name: "Pandas",

@@ -54,7 +54,7 @@ function Descripcion() {
           </div>
           <div className='flex flex-col mt-3'>
             <p>
-              <span className='font-bold'>Mi correo: </span> noevazquez@famvazpom.tech
+              <span className='font-bold'>Mi correo: </span> famvazpom@gmail.com
             </p>
             <p>
               <span className='font-bold'>Mi telefono: </span> +52 984 280 0369

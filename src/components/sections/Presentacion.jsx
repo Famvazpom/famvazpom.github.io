@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { socials } from '../../constants';
 
 function Presentacion() {
-    const words = ["Backend Developer", "Django", 'Python', 'GameDev', 'Ingeniero en Datos'];
+    const words = ["Python Developer", "Django", 'Backend', 'Game Dev', 'Data Engineer'];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentWord, setCurrentWord] = useState('');
     const [letterIndex, setLetterIndex] = useState(0);
