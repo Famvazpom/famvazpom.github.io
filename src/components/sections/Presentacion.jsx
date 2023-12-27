@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
-import { socials } from '../../constants';
+import { socials,words } from '../../constants';
 
 function Presentacion() {
-    const words = ["Python Developer", "Django", 'Backend', 'Game Dev', 'Data Engineer'];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentWord, setCurrentWord] = useState('');
     const [letterIndex, setLetterIndex] = useState(0);
@@ -60,7 +59,7 @@ function Presentacion() {
                             transition={{ duration: 1 }}
                             className=''
                         >
-                            <p className='text-8xl' >¡HOLA! SOY NOE </p>
+                            <p className='text-8xl' >HI! I'M NOE </p>
                             <p className='text-5xl'>
                                 {currentWord.slice(0, letterIndex)}
                             </p>

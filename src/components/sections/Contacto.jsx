@@ -43,7 +43,7 @@ function Contacto() {
       .then(
         () => {
           setLoading(false);
-          alert("Gracias, me pondre en contacto contigo lo mas pronto posible.");
+          alert("Thank you, I will contact you as soon as possible..");
 
           setForm({
             name: "",
@@ -53,9 +53,7 @@ function Contacto() {
         },
         (error) => {
           setLoading(false);
-          console.error(error);
-
-          alert("Algo salio mal, prueba de nuevo.");
+          alert("Somethin went wrong... Please try again later");
         }
       );
   };
@@ -64,7 +62,7 @@ function Contacto() {
     <div id="contact" className="pattern" >
       <div className='mb-5'>
         <h1 className="text-center text-4xl separator-line">
-        Contactame!.
+        Lets get in touch!
         </h1>
       </div>
       <div className='flex flex-col sm:flex-row p-8 '>
@@ -75,35 +73,35 @@ function Contacto() {
             className='mt-12 flex flex-col'
           >
             <label className='flex flex-col p-2'>
-              <span className='text-white font-medium mb-4'>Nombre</span>
+              <span className='text-white font-medium mb-4'>Name</span>
               <input
                 type='text'
                 name='name'
                 value={form.name}
                 onChange={handleChange}
-                placeholder="Nombre"
+                placeholder="Your name"
                 className='bg-tertiary py-4 px-6 placeholder:text-third text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
             <label className='flex flex-col p-2'>
-              <span className='text-white font-medium mb-4'>Correo</span>
+              <span className='text-white font-medium mb-4'>Mail</span>
               <input
                 type='email'
                 name='email'
                 value={form.email}
                 onChange={handleChange}
-                placeholder="Correo"
+                placeholder="Mail"
                 className='bg-tertiary py-4 px-6 placeholder:text-third text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
             <label className='flex flex-col p-2'>
-              <span className='text-white font-medium mb-4'>Mensaje</span>
+              <span className='text-white font-medium mb-4'>Message</span>
               <textarea
                 rows={7}
                 name='message'
                 value={form.message}
                 onChange={handleChange}
-                placeholder='Mensaje'
+                placeholder='Something you want to tell me?'
                 className='bg-tertiary py-4 px-6 placeholder:text-third text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
@@ -113,7 +111,7 @@ function Contacto() {
               className={`bg-complementary text-2xl w-fit p-2 mt-2 rounded-md shadow-md hover:shadow-2xl cursor-pointer `}
               disabled={loading ? true : false}
             >
-              Enviar
+              Send
             </button>
           </form>
         </div>

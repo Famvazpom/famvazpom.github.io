@@ -9,10 +9,10 @@ function Proyectos() {
     <div id="projects" className='flex flex-col pattern'>
       <div className='mb-5'>
         <h1 className="text-center text-4xl separator-line">
-          Proyectos
+          Project
         </h1>
         <h2 className='text-center text-2xl font-light'>
-          Algunos de mis proyectos mas importantes.
+          Some of my projects.
         </h2>
       </div>
       <div className='flex flex-col p-8'>
@@ -41,9 +41,10 @@ function ProjectCard({ project,id }) {
         <div className='flex flex-col md:flex-row md:w-7/12'>
           <div className='flex flex-col w-11/12 p-4 justify-between'>
             <h1 className='text-2xl text-left separator-line-project' >{project.name}</h1>
-            <p className='text-lg' >Rol: {project.rol}</p>
-            <p className='text-lg' >{project.descripcion}</p>
             <div className='flex-grow'></div>
+            <div className='bottom-0 flex flex-wrap'>
+              <ProjectSpecs project={project} /> 
+            </div>
             <div className='bottom-0 flex flex-wrap'>
               {
                 project.techs.map((tech, index) => <CompanyTech key={`project-tech-${index}`} tech={tech} />)
@@ -67,6 +68,35 @@ function ProjectLinks({ link }) {
       {<link.icon size='40' />}
       <span className='text-xs text-center'>{link.name}</span>
     </a >
+  )
+}
+function ProjectSpecs({ project }) {
+  if(project.specs)
+    return (
+   <div className='p-2'>
+        {project.rol} <br/>
+        {project.descripcion}
+        <ul className='list-disc ml-5 space-y-2'>
+          {
+            project.specs.map((spec, index) => <ProjectSpec key={`project-spec-${index}`} spec={spec} />)
+          }
+        </ul>
+    </div>
+    )
+  return (
+    <div className='p-2'>
+        {project.rol} <br/>
+        {project.descripcion}
+    </div>
+  )
+}
+
+function ProjectSpec({spec})
+{
+  return(
+    <li className='text-white-100 text-justify pl-1 tracking-wider'>
+      {spec}
+    </li>
   )
 }
 

@@ -4,60 +4,67 @@ import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 
 
+
 function Descripcion() {
   return (
     <section id='about-me' className='px-8 mt-8'>
       <div className='mb-5'>
         <h1 className="text-center text-4xl separator-line">
-          Acerca de mi
+          About Me
         </h1>
         <h2 className='text-center text-2xl font-light'>
-          Aqui encontraras información acerca de mí, a que me dedico y las tecnologias que conozco.
+        Here you will find information about me, what I do, and the technologies I know.
         </h2>
       </div>
       <div className='flex flex-col md:flex-row'>
         <div className='sm:w-1/2 p-5 leading-loose text-justify'>
-          <p className='mb-2'>Me llamo Noe Vazquez, soy <span className='font-bold'> Ingeniero en Datos y Desarrolador Backend. </span></p>
+          <p className='mb-2'>With three years of experience, I am skilled in Python and Django as a <span className='font-bold'> Data Engeneer and Python Developer. </span></p>
           <p className='mb-2'>
-            Tengo experiencia en el desarrollo de aplicaciones web,
-            he trabajado principalmente con el framework Django, con librerias como Django Rest Framework, HTML, CSS y un JavaScript.
+            My skillset includes <strong>self-education, critical thinking</strong>, and the ability to lead small teams.
+          </p>
+          <p className='mb-2'>
+            I've primarily worked with the Django framework, along with libraries such as Django Rest Framework, HTML, CSS, and some JavaScript.
           </p>
 
           <p>
-            En mis tiempos libres suelo estar aprendiendo sobre el desarrollo de videojuegos.
+            In my free time, I usually focus on learning about video game development.
           </p>
           <p>
-            Estoy abierto a ofertas laborales en las que pueda contribuir, aprender y mejorar.
+          I am open to job opportunities where I can contribute, learn, and improve.
           </p>
           <p>
-            Si tiene una oferta en que conicida con mis habilidades y experiencia, no dude en <span className='font-bold'> contactarme. </span>
+          If you have an offer that aligns with my skills and experience, please do not hesitate to <span className='font-bold'>
+              <HashLink smooth to="#contact" className='hover:text-neutral' >
+                Get in touch. 
+              </HashLink>
+            </span>
           </p>
           <div className='flex flex-row'>
             <div className='bg-complementary text-2xl w-fit p-2 mt-2 mx-2 rounded-md shadow-md hover:shadow-2xl cursor-pointer '>
               <HashLink smooth to="#contact" className='hover:text-neutral' >
-                Contacto
+                Contact
               </HashLink>
             </div>
             <div className='bg-complementary text-2xl w-fit p-2 mt-2 mx-2 rounded-md shadow-md hover:shadow-2xl cursor-pointer '>
               <Link to="/Noe Vazquez.pdf" target="_blank" download className='hover:text-neutral m-2' >
-                Descarga mi CV
+                Download my resume.
               </Link>
             </div>
           </div>
         </div>
         <div className='flex flex-wrap flex-col w-full sm:w-1/2 p-2'>
           <h1 className='text-xl text-center' >
-            Tecnologias que conozco.
+            Known techs.
           </h1>
           <div className='flex flex-wrap'>
             {techs.map((tech, index) => <TechBullet key={`tech-${index}`} tech={tech} />)}
           </div>
-          <div className='flex flex-col mt-3'>
+          <div className='flex flex-col mt-3 text-justify'>
             <p>
-              <span className='font-bold'>Mi correo: </span> famvazpom@gmail.com
+              <span className='font-bold'>E-mail: </span> famvazpom@gmail.com
             </p>
             <p>
-              <span className='font-bold'>Mi telefono: </span> +52 984 280 0369
+              <span className='font-bold'>Phone Number: </span> +52 984 280 0369
             </p>
           </div>
         </div>

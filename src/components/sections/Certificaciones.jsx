@@ -17,10 +17,10 @@ function Certificaciones() {
         <section id='certificates' className='px-8 mt-8'>
             <div className='mb-5'>
                 <h1 className="text-center text-4xl separator-line">
-                    Certificaciones
+                    Certifications
                 </h1>
                 <h2 className='text-center text-2xl font-light'>
-                    En que me he certificado.
+                    Certifications I have obtained.
                 </h2>
             </div>
             <div className='mb-8'>
@@ -44,7 +44,7 @@ function CertificationItem({ certificacion }) {
                     <img className='w-full h-full p-2 object-contain' src={certificacion.image} />
                 </div>
                 <div className='text-center'>
-                    {certificacion.name} - Enlace de <a className='bg-complementary w-fit p-1 rounded-md shadow-md hover:shadow-2xl cursor-pointer ' href={certificacion.url} target='_blank' >Creedly</a>
+                    {certificacion.name} - Link to <a className='bg-complementary w-fit p-1 rounded-md shadow-md hover:shadow-2xl cursor-pointer ' href={certificacion.url} target='_blank' >Creedly</a>
                 </div>
             </div>
         
