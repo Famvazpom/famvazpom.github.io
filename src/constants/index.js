@@ -402,6 +402,18 @@ const certifications = [
         url: 'https://www.credly.com/badges/67f11b22-8743-401e-9abb-c8cdf4f2470a',
         image: 'assets/images/az-900.png'
     },
+    {
+        name: 'Google Cloud Essentials',
+        code: 'GCP-',
+        url: 'https://www.cloudskillsboost.google/public_profiles/e589ee1f-cb5a-4e8e-a61b-aa6be8b0b6e4/badges/7939997',
+        image: 'assets/images/gcp/GCP-Essentials.png'
+    },
+    {
+        name: 'Google Cloud Computing Fundamentals',
+        code: 'GCP-',
+        url: 'https://www.cloudskillsboost.google/public_profiles/e589ee1f-cb5a-4e8e-a61b-aa6be8b0b6e4/badges/7939997',
+        image: 'assets/images/gcp/GCP-Cloud Computing Fundamentals.png'
+    },
 ]
 
 const projects = [
