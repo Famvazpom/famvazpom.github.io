@@ -411,8 +411,14 @@ const certifications = [
     {
         name: 'Google Cloud Computing Fundamentals',
         code: 'GCP-',
-        url: 'https://www.cloudskillsboost.google/public_profiles/e589ee1f-cb5a-4e8e-a61b-aa6be8b0b6e4/badges/7939997',
+        url: 'https://www.cloudskillsboost.google/public_profiles/e589ee1f-cb5a-4e8e-a61b-aa6be8b0b6e4/badges/7940537',
         image: 'assets/images/gcp/GCP-Cloud Computing Fundamentals.png'
+    },
+    {
+        name: 'Google Cloud Computing Foundations: Infrastructure in Google Cloud',
+        code: 'GCP-',
+        url: 'https://www.cloudskillsboost.google/public_profiles/e589ee1f-cb5a-4e8e-a61b-aa6be8b0b6e4/badges/8083334',
+        image: 'assets/images/gcp/GCP - Cloud Computing Foundations.png'
     },
 ]
 
