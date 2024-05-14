@@ -23,7 +23,7 @@ function Certificaciones() {
                     Certifications and Badges I have obtained so far.
                 </h2>
             </div>
-            <div className='mb-8'>
+            <div className='mb-8 p-5'>
                 <Slider {...settings}>
 
                     {
