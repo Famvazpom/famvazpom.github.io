@@ -74,7 +74,7 @@ function Presentacion() {
                         transition={{ duration: 1 }}
                         className=''
                     >
-                        <img className='w-full h-full p-2 object-contain' src='assets/images/profile.png' />
+                        <img className='w-full h-full p-2 rounded-full' src='assets/images/profile.png' />
                     </motion.div>
                 </div>
             </div>

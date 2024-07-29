@@ -63,9 +63,6 @@ function Descripcion() {
             <p>
               <span className='font-bold'>E-mail: </span> famvazpom@gmail.com
             </p>
-            <p>
-              <span className='font-bold'>Phone Number: </span> +52 984 280 0369
-            </p>
           </div>
         </div>
 

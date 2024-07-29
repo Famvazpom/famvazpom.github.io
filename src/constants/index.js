@@ -11,7 +11,8 @@ import {
     BiLogoGithub,
     BiLogoTailwindCss,
     BiLogoReact,
-    BiLogoUnity
+    BiLogoUnity,
+    BiLogoTypescript
 
 
 } from 'react-icons/bi'
@@ -30,10 +31,68 @@ import {
     SiKeras,
     SiTensorflow,
     SiCplusplus,
-    SiCsharp
+    SiCsharp,
+    SiNestjs
 } from 'react-icons/si'
 
 const work_xp = [
+    {
+        title: "Python AI & Fullstack Developer",
+        company_name: "The RocketCode",
+        image: 'assets/images/rocketCodelogo.jfif',
+        date: "March 2024 - Now",
+        location: 'Remote',
+        tech: [
+            {
+                name: "Python",
+                icon: BiLogoPython,
+                bgcolor: "bg-green-500",
+            },
+            {
+                name: "React",
+                icon: BiLogoReact,
+                bgcolor: "bg-blue-500",
+            },
+            {
+                name: "HTML",
+                icon: BiLogoHtml5,
+                bgcolor: "bg-orange-700",
+            },
+            {
+                name: "CSS",
+                icon: BiLogoCss3,
+                bgcolor: "bg-blue-700",
+            },
+            {
+                name: "Typescript",
+                icon: BiLogoTypescript,
+                bgcolor: "bg-yellow-600",
+            },
+            {
+                name: "NestJS",
+                icon: SiNestjs,
+                bgcolor: "bg-yellow-600",
+            },
+        ],
+        points: [
+            {
+                title: "Develop and Improve AI Models:",
+                description: "Develop or enhance machine learning models with various AI techniques.",
+            },
+            {
+                title: "Identify and Fix Security Issues:",
+                description: "Identify and resolve security vulnerabilities by conducting assessments, implementing best practices, and applying patches to ensure system integrity and data protection."
+            },
+            {
+                title: "ReactJS & Next.js: ",
+                description: "Develop responsive user interfaces using ReactJS with Vite or Next.js. Implement state management with Redux or Context API and enhance UI/UX using Material-UI or Tailwind CSS."
+            },
+            {
+                title: "NestJS & TypeORM",
+                description: "Create RESTful APIs and endpoints with secure authentication and authorization."
+            },
+        ],
+    },
     {
         title: "Software Engineer ",
         company_name: "AV ELECTRONIC SERVICES",
@@ -560,6 +619,6 @@ const projects = [
     },
 ]
 
-const words = ["Python Developer", "Django", 'Backend', 'Game Dev', 'Data Engineer'];
+const words = ["Python Developer", 'Fullstack Developer', "Django", 'Game Dev', 'AI'];
 
 export { work_xp, socials, techs, certifications, projects,words };

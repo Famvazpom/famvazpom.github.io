@@ -53,7 +53,7 @@ function TimeLineObject({ company }) {
                     <img
                         src={company.image}
                         alt={company.company_name}
-                        className='object-contain'
+                        className='rounded-full object-contain'
                     />
                 </div>
             }
