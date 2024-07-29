@@ -3,46 +3,48 @@ import { motion } from 'framer-motion';
 import { socials,words } from '../../constants';
 
 function Presentacion() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [currentWord, setCurrentWord] = useState('');
-    const [letterIndex, setLetterIndex] = useState(0);
-    const [showingWord, setShowingWord] = useState(true);
+    const [displayedText, setDisplayedText] = useState('');
+    const [currentWordIndex, setCurrentWordIndex] = useState(0);
+    const [isTyping, setIsTyping] = useState(true);
+    const [isClearing, setIsClearing] = useState(false);
 
     useEffect(() => {
-        setCurrentWord(words[currentIndex]);
-        setLetterIndex(0);
-        setShowingWord(true);
-    }, [currentIndex]);
-
-    useEffect(() => {
-        let interval;
-
-        if (showingWord) {
-            if (letterIndex < currentWord.length) {
-                interval = setInterval(() => {
-                    setLetterIndex((prevIndex) => prevIndex + 1);
-                }, 100); // Ajusta el tiempo de intervalo según la velocidad deseada de escritura
-            } else {
-                clearInterval(interval);
-                setTimeout(() => {
-                    setShowingWord(false);
-                }, 2000); // Tiempo de espera para mostrar la palabra completa (2 segundos en este caso)
+        const currentWord = words[currentWordIndex];
+        let timeoutId;
+        console.log({isTyping,isClearing,currentWordIndex});
+        if (isTyping) {
+          // Typing effect
+          let index = 0;
+          timeoutId = setInterval(() => {
+            setDisplayedText(currentWord.substring(0, index + 1));
+            index += 1;
+            if (index >= currentWord.length) {
+              clearInterval(timeoutId);
+              setIsTyping(false);
             }
-        } else {
-            if (letterIndex > 0) {
-                interval = setInterval(() => {
-                    setLetterIndex((prevIndex) => prevIndex - 1);
-                }, 100); // Ajusta el tiempo de intervalo según la velocidad deseada de borrado
-            } else {
-                clearInterval(interval);
-                setTimeout(() => {
-                    setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-                }, 1000); // Tiempo de espera para pasar a la siguiente palabra (1 segundo en este caso)
+          }, 150); // Adjust typing speed here
+        } else if (isClearing) {
+          // Clearing effect
+          let index = currentWord.length;
+          timeoutId = setInterval(() => {
+            setDisplayedText(currentWord.substring(0, index - 1));
+            index -= 1;
+            if (index <= 0) {
+              clearInterval(timeoutId);
+              setIsClearing(false);
+              setIsTyping(true);
+              // Move to the next word
+              setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
             }
+          }, 100); // Adjust clearing speed here
+        }else {
+            setTimeout(() => {
+                setIsClearing(true);
+              }, 2000);
         }
-
-        return () => clearInterval(interval);
-    }, [letterIndex, currentWord, showingWord, words, currentIndex]);
+    
+        return () => clearInterval(timeoutId); // Clean up interval on component unmount
+      }, [isTyping, isClearing, currentWordIndex]);
 
 
 
@@ -61,7 +63,7 @@ function Presentacion() {
                         >
                             <p className='text-8xl' >HI! I'M NOE </p>
                             <p className='text-5xl'>
-                                {currentWord.slice(0, letterIndex)}
+                                {displayedText}
                             </p>
                         </motion.div>
                     </div>
