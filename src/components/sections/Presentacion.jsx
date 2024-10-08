@@ -8,15 +8,21 @@ function Presentacion() {
     const [isTyping, setIsTyping] = useState(true);
     const [isClearing, setIsClearing] = useState(false);
 
+    const displayString = (text)=> {
+        if(text.length == 0) {
+            return ' '.repeat(text.length);
+        }
+        return text
+    }
+
     useEffect(() => {
         const currentWord = words[currentWordIndex];
         let timeoutId;
-        console.log({isTyping,isClearing,currentWordIndex});
         if (isTyping) {
           // Typing effect
           let index = 0;
           timeoutId = setInterval(() => {
-            setDisplayedText(currentWord.substring(0, index + 1));
+            setDisplayedText(displayString(currentWord.substring(0, index + 1)));
             index += 1;
             if (index >= currentWord.length) {
               clearInterval(timeoutId);
@@ -27,7 +33,7 @@ function Presentacion() {
           // Clearing effect
           let index = currentWord.length;
           timeoutId = setInterval(() => {
-            setDisplayedText(currentWord.substring(0, index - 1));
+            setDisplayedText(displayString(currentWord.substring(0, index - 1)));
             index -= 1;
             if (index <= 0) {
               clearInterval(timeoutId);
@@ -60,6 +66,7 @@ function Presentacion() {
                             animate={{ x: "0%" }}
                             transition={{ duration: 1 }}
                             className=''
+                            style={{minHeight: "150px",}}
                         >
                             <p className='text-8xl' >HI! I'M NOE </p>
                             <p className='text-5xl'>

@@ -32,12 +32,13 @@ import {
     SiTensorflow,
     SiCplusplus,
     SiCsharp,
-    SiNestjs
+    SiNestjs,
+    SiDotnet
 } from 'react-icons/si'
 
 const work_xp = [
     {
-        title: "Python AI & Fullstack Developer",
+        title: "Python AI, Fullstack Developer & Tech Lead",
         company_name: "The RocketCode",
         image: 'assets/images/rocketCodelogo.jfif',
         date: "March 2024 - Now",
@@ -73,6 +74,16 @@ const work_xp = [
                 icon: SiNestjs,
                 bgcolor: "bg-yellow-600",
             },
+            {
+                name: "",
+                icon: SiCsharp,
+                bgcolor: "bg-purple-600",
+            },
+            {
+                name: "ASP.NET",
+                icon: SiDotnet,
+                bgcolor: "bg-purple-600",
+            },
         ],
         points: [
             {
@@ -90,6 +101,12 @@ const work_xp = [
             {
                 title: "NestJS & TypeORM",
                 description: "Create RESTful APIs and endpoints with secure authentication and authorization."
+            },
+            {
+                title: "ASP.NET",
+                description: "Developed an ETL process from an SAP service for data extraction, transformation, and loading, \
+                    an API for the three-way matching process \
+                    and Integrated authentication using Azure SSO.."
             },
         ],
     },
