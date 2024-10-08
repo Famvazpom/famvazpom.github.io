@@ -461,6 +461,11 @@ const techs = [
         icon: SiCsharp,
         bgcolor: "bg-blue-600",
     },
+    {
+        name: ".NET",
+        icon: SiDotnet,
+        bgcolor: "bg-blue-600",
+    },
 
 ]
 

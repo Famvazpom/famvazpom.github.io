@@ -18,12 +18,12 @@ function Descripcion() {
       </div>
       <div className='flex flex-col md:flex-row'>
         <div className='sm:w-1/2 p-5 leading-loose text-justify'>
-          <p className='mb-2'>With three years of experience, I am skilled in Python and Django as a <span className='font-bold'> Data Engeneer and Python Developer. </span></p>
+          <p className='mb-2'>With three years of experience, I am skilled in Typescript, C#, Python and Django as a <span className='font-bold'> Fullstack Developer. </span></p>
           <p className='mb-2'>
             My skillset includes <strong>self-education, critical thinking</strong>, and the ability to lead small teams.
           </p>
           <p className='mb-2'>
-            I've primarily worked with the Django framework, along with libraries such as Django Rest Framework, HTML, CSS, and some JavaScript.
+            I've primarily worked with the Django framework, React and NestJs, along with Django Rest Framework, HTML, CSS, etc.
           </p>
 
           <p>
