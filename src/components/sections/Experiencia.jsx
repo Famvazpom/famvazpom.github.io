@@ -83,9 +83,9 @@ function TimeLineObject({ company }) {
                     ))}
                 </ul>
             </div>
-            
+
             <CompanyProject company={company} />
-            
+
             <span className='p-2 font-bold capitalize'>
                 Used techs:
             </span>

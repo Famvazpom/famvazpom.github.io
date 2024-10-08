@@ -38,7 +38,7 @@ import {
 
 const work_xp = [
     {
-        title: "Python AI, Fullstack Developer & Tech Lead",
+        title: "Python AI, Fullstack Developer and Tech Lead",
         company_name: "The RocketCode",
         image: 'assets/images/rocketCodelogo.jfif',
         date: "March 2024 - Now",
@@ -373,12 +373,6 @@ const socials = [
         url: "https://github.com/Famvazpom",
         text: "Github",
     },
-    {
-        icon: BiLogoDiscord,
-        url: "https://discordapp.com/users/322555089996742658",
-        text: "Discord",
-    },
-
 ];
 
 const techs = [
@@ -558,7 +552,7 @@ const projects = [
         links: [
             {
                 icon: MdOutlineWebAsset,
-                link: 'https://rivierasoftpage.famvazpom.tech/',
+                link: 'https://rivierasoftpage.famvazpom.com/',
                 name: 'Web Site'
             },
         ]
