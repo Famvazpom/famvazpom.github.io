@@ -472,6 +472,12 @@ const techs = [
 const certifications = [
 
     {
+        name: 'Associate Cloud Engineer',
+        code: 'AZ-900',
+        url: 'https://www.credly.com/badges/4cfb35e8-feeb-49cd-89e9-43cfb0978422/public_url',
+        image: 'assets/images/gcp/GCP - ACE.png'
+    },
+    {
         name: 'Azure Fundamentals',
         code: 'AZ-900',
         url: 'https://www.credly.com/badges/67f11b22-8743-401e-9abb-c8cdf4f2470a',
