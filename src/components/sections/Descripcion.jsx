@@ -12,25 +12,19 @@ function Descripcion() {
         <h1 className="text-center text-4xl separator-line">
           About Me
         </h1>
-        <h2 className='text-center text-2xl font-light'>
-        Here you will find information about me, what I do, and the technologies I know.
-        </h2>
       </div>
       <div className='flex flex-col md:flex-row'>
         <div className='sm:w-1/2 p-5 leading-loose text-justify'>
-          <p className='mb-2'>With three years of experience, I am skilled in Typescript, C#, Python and Django as a <span className='font-bold'> Fullstack Developer. </span></p>
-          <p className='mb-2'>
-            My skillset includes <strong>self-education, critical thinking</strong>, and the ability to lead small teams.
-          </p>
-          <p className='mb-2'>
-            I've primarily worked with the Django framework, React and NestJs, along with Django Rest Framework, HTML, CSS, etc.
+          <p className='mb-2'></p><p>
+            I’m a Software Engineer and Tech Lead with solid experience in software architecture, microservices, AI/LLM integration, and full-stack development. Over the years, I’ve worked on designing and building scalable, cloud-based solutions that are reliable, maintainable, and aligned with real business needs.
           </p>
 
           <p>
-            In my free time, I usually focus on learning about video game development.
+            I enjoy working across the entire stack, from backend services and system architecture to frontend applications and integrations. I’m especially motivated by optimizing end-to-end systems, improving performance, and turning complex technical challenges into clean, well-structured solutions that teams can easily evolve over time.
           </p>
+
           <p>
-          I am open to job opportunities where I can contribute, learn, and improve.
+            Beyond my professional work, I’m deeply passionate about game development and continuous learning. I’m always exploring new technologies, tools, and ideas, driven by curiosity and the desire to keep improving both my technical skills and the quality of the products I build.
           </p>
           <p>
           If you have an offer that aligns with my skills and experience, please do not hesitate to <span className='font-bold'>
@@ -46,7 +40,7 @@ function Descripcion() {
               </HashLink>
             </div>
             <div className='bg-complementary text-2xl w-fit p-2 mt-2 mx-2 rounded-md shadow-md hover:shadow-2xl cursor-pointer '>
-              <Link to="/Noe Vazquez.pdf" target="_blank" download className='hover:text-neutral m-2' >
+              <Link to="https://drive.google.com/file/d/1D0GfzlTJxpNX0ksoFJZwpYyRptDBQkbz/view?usp=sharing" target="_blank" download className='hover:text-neutral m-2' >
                 Download my resume.
               </Link>
             </div>

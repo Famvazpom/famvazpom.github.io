@@ -13,8 +13,6 @@ import {
     BiLogoReact,
     BiLogoUnity,
     BiLogoTypescript
-
-
 } from 'react-icons/bi'
 
 import {
@@ -36,13 +34,16 @@ import {
     SiDotnet
 } from 'react-icons/si'
 
+import { SiNeo4J } from "react-icons/si";
+
 const work_xp = [
+    // Tech Lead
     {
-        title: "Python AI, Fullstack Developer and Tech Lead",
+        title: "Tech Lead",
         company_name: "The RocketCode",
-        image: 'assets/images/rocketCodelogo.jfif',
-        date: "March 2024 - Now",
-        location: 'Remote',
+        image: "assets/images/rocketCodelogo.jfif",
+        location: "Remote",
+        date: "Sept 2024 – Present",
         tech: [
             {
                 name: "Python",
@@ -87,28 +88,98 @@ const work_xp = [
         ],
         points: [
             {
-                title: "Develop and Improve AI Models:",
-                description: "Develop or enhance machine learning models with various AI techniques.",
+                title: "Architecture & Technical Leadership:",
+                description: "Led the architectural design of scalable, modular, cloud-based systems using FastAPI, Django, NestJS, React, Next.js, PostgreSQL, and Firestore. Defined technical roadmaps, estimations, sprint planning, and coordinated multidisciplinary teams."
             },
             {
-                title: "Identify and Fix Security Issues:",
-                description: "Identify and resolve security vulnerabilities by conducting assessments, implementing best practices, and applying patches to ensure system integrity and data protection."
+                title: "Code Quality & Engineering Standards:",
+                description: "Conducted code reviews ensuring compliance with SOLID principles, Clean Architecture, design patterns, and coding standards."
             },
             {
-                title: "ReactJS & Next.js: ",
-                description: "Develop responsive user interfaces using ReactJS with Vite or Next.js. Implement state management with Redux or Context API and enhance UI/UX using Material-UI or Tailwind CSS."
+                title: "Backend & Frontend Development:",
+                description: "Developed backend services with NestJS, TypeORM, and PostgreSQL, including authentication with JWT, OAuth2, and Azure SSO. Built frontend applications using React, Next.js, Vite, Redux, TailwindCSS, and Material-UI."
             },
             {
-                title: "NestJS & TypeORM",
-                description: "Create RESTful APIs and endpoints with secure authentication and authorization."
+                title: "Enterprise Integrations & ETL:",
+                description: "Created ETL processes in C#/.NET for SAP integrations, three-way matching workflows, user and permission management, and notifications."
             },
             {
-                title: "ASP.NET",
-                description: "Developed an ETL process from an SAP service for data extraction, transformation, and loading, \
-                    an API for the three-way matching process \
-                    and Integrated authentication using Azure SSO.."
+                title: "DevOps & Delivery:",
+                description: "Implemented Git Flow, CI/CD pipelines, code quality rules, and documentation standards. Standardized version control and release management, improving software stability and traceability."
+            }
+        ]
+    },
+    // Python AI Developer
+    {
+        title: "Python AI Developer",
+        company_name: "The RocketCode",
+        image: "assets/images/rocketCodelogo.jfif",
+        location: "Remote",
+        date: "Mar 2024 – Aug 2024",
+        tech: [
+            {
+                name: "Python",
+                icon: BiLogoPython,
+                bgcolor: "bg-green-500",
+            },
+            {
+                name: "React",
+                icon: BiLogoReact,
+                bgcolor: "bg-blue-500",
+            },
+            {
+                name: "HTML",
+                icon: BiLogoHtml5,
+                bgcolor: "bg-orange-700",
+            },
+            {
+                name: "CSS",
+                icon: BiLogoCss3,
+                bgcolor: "bg-blue-700",
+            },
+            {
+                name: "Typescript",
+                icon: BiLogoTypescript,
+                bgcolor: "bg-yellow-600",
+            },
+            {
+                name: "NestJS",
+                icon: SiNestjs,
+                bgcolor: "bg-yellow-600",
+            },
+            {
+                name: "C#",
+                icon: SiCsharp,
+                bgcolor: "bg-purple-600",
+            },
+            {
+                name: "ASP.NET",
+                icon: SiDotnet,
+                bgcolor: "bg-purple-600",
             },
         ],
+        points: [
+            {
+                title: "AI / LLM & RAG Systems:",
+                description: "Developed and integrated AI/LLM solutions using Python with OpenAI, Llama, Hugging Face, and open-source models for classification, information extraction, OCR, and RAG pipelines."
+            },
+            {
+                title: "RAG Monitoring & Optimization:",
+                description: "Implemented monitoring KPIs for RAG systems, including hallucination rate, response latency, and token consumption."
+            },
+            {
+                title: "OCR & Intelligent Data Pipelines:",
+                description: "Built OCR + AI pipelines using Python, Azure OpenAI, and TypeScript for structured data extraction."
+            },
+            {
+                title: "AI Orchestration & Cost Optimization:",
+                description: "Integrated an AI Orchestrator for dynamic model selection, intelligent routing, and fallback logic, reducing operational costs and optimizing token usage across multiple AI providers."
+            },
+            {
+                title: "Key Achievements:",
+                description: "Improved ML model accuracy from 12% to 85% and detected unauthorized usage, significantly reducing recurring cloud costs."
+            }
+        ]
     },
     {
         title: "Software Engineer ",
@@ -155,22 +226,22 @@ const work_xp = [
         ],
         points: [
             {
-                title: "Gym management system:",
-                description: "Design, development, deployment, and maintenance of Web system using Django, HTML, CSS, JavaScript, and MySQL for Membership fee collection for users from various gyms, reporting and tracking equipment failures within the establishment, management of staff, and administrative reporting.",
+                title: "Backend Systems Development:",
+                description: "Designed and developed backend systems using Python, Django, and Django Rest Framework for POS applications and administrative management platforms."
             },
             {
-                title: "Server Deployment: ",
-                description: "Deployment of system instances for clients using cloud technologies such as Azure, AWS and PythonAnywhere."
+                title: "Cloud Deployment & Infrastructure:",
+                description: "Deployed and managed workloads on Azure App Service, Azure Virtual Machines, and PythonAnywhere, ensuring system availability and scalability."
             },
             {
-                title: "POS Application Development: ",
-                description: "Design, development and deployment of POS App using Django and MySql for sales management, inventory control, pricing, sales reports, and commission tracking."
+                title: "AI & Automation Solutions:",
+                description: "Built AI-driven solutions using NLTK, Transformers, and supervised Machine Learning models for customer support automation and inventory demand prediction."
             },
             {
-                title: "Repair and Maintenance of Electronic Equipment.",
-                description: ""
-            },
-        ],
+                title: "Multi-Branch Business Modules:",
+                description: "Implemented multi-branch modules including reporting, invoicing, permissions management, auditing, and service order tracking."
+            }
+        ]
     },
     {
         title: "Project Leader and Main Developer",
@@ -217,22 +288,22 @@ const work_xp = [
         ],
         points: [
             {
-                title: "Store and repair control system: ",
-                description: "Design, development, and deployment of Web App using Django, Django Rest Framework, HTML, CSS, JavaScript, and PostgreSQL for service order tracking, spare parts management, sales reports, commissions, and user administration."
+                title: "Repair Shop & Inventory System:",
+                description: "Developed a repair shop and inventory management system using Django, Django Rest Framework, PostgreSQL, HTML, CSS, and JavaScript."
             },
             {
-                title: "System Instance Deployment: ",
-                description: "Deployment of system instances for customers who purchase a license using MySQL and cloud technologies such as Azure, Amazon, and PythonAnywhere."
+                title: "Core Business Modules:",
+                description: "Built key modules including service orders, spare parts inventory, commissions, reporting, and role-based access control (RBAC)."
             },
             {
-                title: "License Management:",
-                description: "Management of payment dates and servers of customer licenses."
+                title: "Cloud Deployment & Databases:",
+                description: "Deployed system instances using MySQL and cloud infrastructure on Azure and PythonAnywhere."
             },
             {
-                title: "Technical Support",
-                description: ""
-            },
-        ],
+                title: "Multi-Tenant Architecture:",
+                description: "Implemented a multi-tenant architecture enabling licensed, isolated environments per customer."
+            }
+        ]
     },
     {
         title: "Project Leader and Main Developer",
@@ -279,87 +350,23 @@ const work_xp = [
         ],
         points: [
             {
-                title: "Repair workshop control system development:",
-                description: "Design, development, and deployment of a point-of-sale application using Django, Django Rest Framework, HTML, CSS, JavaScript,  MySQL and Apache for service order tracking, sales reports, commissions, and user administration across 8 different branches within a single system."
+                title: "Repair Shop & Inventory System:",
+                description: "Developed a repair shop and inventory control system using Django, Django Rest Framework, PostgreSQL, HTML, CSS, and JavaScript."
             },
             {
-                title: "Computer Mainentance:",
-                description: "Create OS images, maintenance and computer restoration for branches."
+                title: "Functional Business Modules:",
+                description: "Implemented core modules such as service orders, spare parts inventory, commissions, reporting, and role-based access control (RBAC)."
             },
             {
-                title: "Technical Support",
-                description: ""
-            },
-        ],
-    },
-    {
-        title: "Bachelor's Degree in Computer Science, Mayor in Data Engineering",
-        company_name: "Universidad del Caribe",
-        image: 'assets/images/LOGO-UNICARIBE.png',
-        location: 'Cancún, Mexico',
-        date: "Aug 2016 - Dec 2023",
-        tech: [
-            {
-                name: "Python",
-                icon: BiLogoPython,
-                bgcolor: "bg-green-500",
+                title: "Cloud Deployment & Infrastructure:",
+                description: "Deployed system instances using MySQL and cloud services including Azure, AWS, and PythonAnywhere."
             },
             {
-                name: "IA",
-                icon: GiArtificialIntelligence,
-                bgcolor: "bg-primary",
-            },
-            {
-                name: "Pandas",
-                icon: SiPandas,
-                bgcolor: "bg-blue-700",
-            },
-            {
-                name: "Numpy",
-                icon: SiNumpy,
-                bgcolor: "bg-blue-400",
-            },
-            {
-                name: "Tensorflow",
-                icon: SiTensorflow,
-                bgcolor: "bg-orange-600",
-            },
-            {
-                name: "Keras",
-                icon: SiKeras,
-                bgcolor: "bg-red-600",
-            },
-            {
-                name: "C++",
-                icon: SiCplusplus,
-                bgcolor: "bg-blue-600",
-            },
-
-        ],
-        points: [
-            {
-                title: "Studies in:",
-                description: "Data Science, Data Engineering, Machine Learning, Artificial Intelligence.",
-            },
-            {
-                title: "Relevant topics:",
-                description: "Image Processing, Computer Vision, Data Mining, Statistics, Text Mining, Software Engineering, Machine Learning, Artificial Intelligence.",
-            },
-        ],
-        projects: [
-            {
-                title: "ALLMias Unicaribe (Spanish ):",
-                description: "Project where we use the MIAS database to train two models: one for classifying images submitted via the API, determining if an image is a mammogram or not using Google's teachable machine, and another model aiming to predict the presence of breast cancer using the Adaboost classifier. Additionally, an API and a web platform were created using Django REST Framework and React.",
-                url: "https://github.com/Famvazpom/allmiasucaribe",
-            },
-            {
-                title: "Topic Modeling Project( Spanish ):",
-                description: "Project where we use LDA to find the most common topics on multiple documents using NLTK and Scikit-Learn.",
-                url: "https://github.com/Famvazpom/mineria_homeworks/blob/master/Proyecto%205%20-%20Modelado%20de%20temas/Modelado%20de%20temas%20-%20160300153.ipynb",
-            },
-        ],
-    },
-
+                title: "System Support & Maintenance:",
+                description: "Provided support and maintenance for the existing system architecture, ensuring stability and operational continuity."
+            }
+        ]
+    }
 ];
 
 const socials = [
@@ -466,11 +473,9 @@ const techs = [
         icon: SiDotnet,
         bgcolor: "bg-blue-600",
     },
-
 ]
 
 const certifications = [
-
     {
         name: 'Associate Cloud Engineer',
         code: 'AZ-900',
@@ -505,13 +510,14 @@ const certifications = [
 
 const projects = [
     {
-        name: 'Riviera Soft',
-        descripcion: 'Administrative system for service workshop control with integrated POS.',
-        rol: 'Owner and Main Developer',
-        image: 'assets/images/rivierasoft.png',
+        name: "Riviera Soft",
+        descripcion: "Administrative system with service orders management and integrated point of sale for repair workshops.",
+        rol: "Owner and Main Developer",
+        image: "assets/images/rivierasoft.png",
         specs: [
-            "Developed using Django, Django Rest Framework, HTML, CSS, JavaScript, MySQL/PostgreSQL and cloud technologies such as Azure and AWS.",
-            "Used by 4 companies in Playa del Carmen, 2 in Cancún and 2 in Mexico City."
+            "Developed an administrative and POS solution for repair workshops using Python and Django.",
+            "Implemented service orders, inventory, sales, reporting, and user management modules.",
+            "Deployed a scalable multi-tenant architecture using Azure and PythonAnywhere."
         ],
         techs: [
             {
@@ -569,13 +575,16 @@ const projects = [
         ]
     },
     {
-        name: 'MATH-IAS - El tutor virtual para los estudiantes de la Universidad del Caribe',
-        descripcion: 'Implements a virtual math tutor on a web platform using Django, Django Rest Framework,React, Azure Web Apps, IBM Watson, and the Bayesian Knowledge Tracing (BKT) technique.',
-        specs : [
-            "Aiming at monitoring the student learning progress using multiple levels of difficulty in which the student will need to progress to enhance their skills in different subjects implemented in the tutor also creating a LaTeX to Speech translate to implement voice explanations on different exercises.",
+        name: "MATH-IAS",
+        descripcion: "Adaptive virtual mathematics tutoring platform for university-level students.",
+        rol: "Backend Developer",
+        image: "assets/images/mathias.png",
+        specs: [
+            "Developed the backend using Python and Django for an adaptive virtual tutoring platform.",
+            "Implemented Bayesian Knowledge Tracing (BKT) to model student learning progress and dynamically adjust difficulty.",
+            "Designed LaTeX-to-Speech processing to generate spoken mathematical explanations.",
+            "Deployed the platform on Azure, ensuring scalability and reliable access."
         ],
-        rol: 'Backend Developer',
-        image: 'assets/images/mathias.png',
         techs: [
             {
                 name: "Python",
@@ -612,6 +621,45 @@ const projects = [
         ]
     },
     {
+        name: "A-dike",
+        descripcion: "AI-powered legal assistant for multi-state legal information retrieval and analysis.",
+        rol: "Fullstack Engineer",
+        image: "assets/images/a-dike.png",
+        specs: [
+            "Designed and maintained RAG data pipelines using Python and Neo4j for ingestion, structuring, and retrieval of multi-state legal information.",
+            "Developed a full-stack platform with Django (backend) and React (frontend), including testing, continuous integration (CI), and a modular component-based architecture.",
+            "Integrated payment processing with Stripe, user and session management with Firebase, and document storage using Cloud Storage."
+        ],
+        techs: [
+            {
+                name: "Python",
+                icon: BiLogoPython,
+                bgcolor: "bg-green-500",
+            },
+            {
+                name: "Django",
+                icon: BiLogoDjango,
+                bgcolor: "bg-green-700",
+            },
+            {
+                name: "React",
+                icon: BiLogoReact,
+                bgcolor: "bg-blue-400",
+            },
+            {
+                name: "Tailwind CSS",
+                icon: BiLogoTailwindCss,
+                bgcolor: "bg-blue-500",
+            },
+            {
+                name: "Neo4j",
+                icon: SiNeo4J,
+                bgcolor: "bg-gray-500",
+            },
+        ],
+        links: []
+    },
+    {
         name: 'TUUM',
         descripcion: 'Interactive vocational test using Unity',
         specs: [
@@ -643,4 +691,4 @@ const projects = [
 
 const words = ["Python Developer", 'Fullstack Developer', "Django", 'Game Dev', 'AI'];
 
-export { work_xp, socials, techs, certifications, projects,words };
+export { work_xp, socials, techs, certifications, projects, words };

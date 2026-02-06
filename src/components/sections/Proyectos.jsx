@@ -39,13 +39,12 @@ function ProjectCard({ project,id }) {
           <img className='w-full h-full p-2 m-2 object-contain rounded-3xl' src={project.image} />
         </div>
         <div className='flex flex-col md:flex-row md:w-7/12'>
-          <div className='flex flex-col w-11/12 p-4 justify-between'>
+          <div className='flex flex-col w-11/12 p-4 h-full'>
             <h1 className='text-2xl text-left separator-line-project' >{project.name}</h1>
-            <div className='flex-grow'></div>
-            <div className='bottom-0 flex flex-wrap'>
-              <ProjectSpecs project={project} /> 
+            <div className='flex-grow overflow-y-auto'>
+              <ProjectSpecs project={project} />
             </div>
-            <div className='bottom-0 flex flex-wrap'>
+            <div className='mt-auto flex flex-wrap'>
               {
                 project.techs.map((tech, index) => <CompanyTech key={`project-tech-${index}`} tech={tech} />)
               }
