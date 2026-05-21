@@ -31,7 +31,10 @@ import {
     SiCplusplus,
     SiCsharp,
     SiNestjs,
-    SiDotnet
+    SiDotnet,
+    SiGooglecloud,
+    SiMicrosoftazure,
+    SiFastapi
 } from 'react-icons/si'
 
 import { SiNeo4J } from "react-icons/si";
@@ -393,6 +396,11 @@ const techs = [
         icon: BiLogoDjango,
         bgcolor: "bg-green-700",
     },
+        {
+        name: "FasstAPI",
+        icon: SiFastapi,
+        bgcolor: "bg-green-500",
+    },
     {
         name: "HTML",
         icon: BiLogoHtml5,
@@ -473,6 +481,58 @@ const techs = [
         icon: SiDotnet,
         bgcolor: "bg-blue-600",
     },
+    {
+        name: "NestJS",
+        icon: SiNestjs,
+        bgcolor: "bg-yellow-600",
+    },
+    {
+        name: "Typescript",
+        icon: BiLogoTypescript,
+        bgcolor: "bg-yellow-600",
+    },
+    {
+        name: "Neo4j",
+        icon: SiNeo4J,
+        bgcolor: "bg-gray-500",
+    },
+    {
+        name: "Azure",
+        icon: SiMicrosoftazure,
+        bgcolor: "bg-blue-700",
+    },
+    {
+        name: "AWS",
+        icon: MdOutlineWebAsset,
+        bgcolor: "bg-orange-600",
+    },
+    {
+        name: "GCP",
+        icon: SiGooglecloud,
+        bgcolor: "bg-green-500",
+    },
+    {
+        name: "Docker",
+        icon: MdOutlineWebAsset,
+        bgcolor: "bg-blue-600",
+    },
+    {
+        name: "Kubernetes",
+        icon: MdOutlineWebAsset,
+        bgcolor: "bg-blue-600",
+    },
+    {
+        name: "CI/CD",
+        icon: MdOutlineWebAsset,
+        bgcolor: "bg-green-600",
+    },
+    {
+        name: "Microservices",
+        icon: MdOutlineWebAsset,
+        bgcolor: "bg-gray-600",
+    },
+
+
 ]
 
 const certifications = [

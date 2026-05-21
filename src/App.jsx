@@ -7,7 +7,7 @@ import Content from './components/Content'
 function App() {
   return (
     <BrowserRouter>
-      <div className='flex bg-primary'
+      <div className='flex min-h-screen bg-primary text-neutral'
       >
         <Sidebar />
         <Content />

@@ -11,17 +11,18 @@ import { MdLocationOn } from "react-icons/md";
 
 function Experiencia() {
     return (
-        <section id='work-experience' className='flex flex-col pattern'>
+        <section id='work-experience' className='section-shell flex flex-col pattern'>
             <div className='mb-5'>
-                <h1 className="text-center text-4xl separator-line">
+                <p className='section-kicker'>Quest log</p>
+                <h1 className="section-title">
                     Work Experience
                 </h1>
-                <h2 className='text-center text-2xl font-light'>
+                <h2 className='text-center text-xl font-light text-muted'>
                     What have I done so far?
                 </h2>
             </div>
 
-            <div className='mt-20 flex flex-col'>
+            <div className='mt-14 flex flex-col'>
                 <VerticalTimeline>
                     {
                         work_xp.map(
@@ -42,10 +43,13 @@ function TimeLineObject({ company }) {
     return (
         <VerticalTimelineElement
             contentStyle={{
-                background: "#3626a7",
+                background: "rgba(16, 19, 33, 0.88)",
                 color: "#fff",
+                border: "1px solid rgba(20, 241, 255, 0.22)",
+                borderRadius: "24px",
+                boxShadow: "0 0 36px rgba(20, 241, 255, 0.12)",
             }}
-            contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+            contentArrowStyle={{ borderRight: "7px solid rgba(20, 241, 255, 0.35)" }}
             date={company.date}
             iconStyle={{ background: company.iconBg }}
             icon={
@@ -58,10 +62,10 @@ function TimeLineObject({ company }) {
                 </div>
             }
         >
-            <div className='border-b-2 border-white pb-2'>
+            <div className='border-b border-white/10 pb-4'>
                 <h3 className='text-neutral text-[24px] font-bold '>{company.title}</h3>
                 <p
-                    className='text-filler text-[16px] font-semibold'
+                    className='text-cyber text-[16px] font-semibold'
                     style={{ margin: (0,0,0,0) }}
                 >
                     {company.company_name}
@@ -73,7 +77,7 @@ function TimeLineObject({ company }) {
                     {company.date}
                 </span>
             </div>
-            <div className='pb-2 border-b-2'>
+            <div className='pb-4 border-b border-white/10'>
                 <ul className='mt-5 list-disc ml-5 space-y-2'>
                     {company.points.map((point, index) => (
                          <CompanyPoint
@@ -86,7 +90,7 @@ function TimeLineObject({ company }) {
 
             <CompanyProject company={company} />
 
-            <span className='p-2 font-bold capitalize'>
+            <span className='p-2 font-bold capitalize text-cyber'>
                 Used techs:
             </span>
             <div className='flex flex-wrap'>
@@ -107,12 +111,12 @@ function TimeLineObject({ company }) {
 function CompanyPoint({ point }) {
     if(point.url)
         return (
-            <li className='text-white-100 text-[14px] text-justify pl-1 tracking-wider'>
-                <strong className='capitalize'><a href={point.url} target='_blank' className='text-blue-500'>{point.title}</a></strong> {point.description}
+            <li className='text-muted text-[14px] text-justify pl-1 tracking-wider'>
+                <strong className='capitalize'><a href={point.url} target='_blank' rel='noreferrer' className='text-cyber hover:text-neutral'>{point.title}</a></strong> {point.description}
             </li>
         )
     return (
-        <li className='text-white-100 text-[14px] text-justify pl-1 tracking-wider'>
+        <li className='text-muted text-[14px] text-justify pl-1 tracking-wider'>
             <strong className='capitalize'>{point.title}</strong> {point.description}
         </li>
     );
@@ -121,7 +125,7 @@ function CompanyPoint({ point }) {
 function CompanyTech({ tech }) {
     return (
         <div
-            className={`flex flex-row ${tech.bgcolor} rounded-lg m-2 p-2 items-center hover:shadow-xl cursor-pointer`}
+            className={`tech-pill ${tech.bgcolor} m-1`}
         >
             {<tech.icon className='mr-1' />}
             {tech.name}
@@ -133,9 +137,9 @@ function CompanyProject({company}){
     if(company.projects)
     {
         return (
-            <div className='pb-2 border-b-2 flex flex-col p-2'>
+            <div className='pb-4 border-b border-white/10 flex flex-col p-2'>
                 <span
-                    className='text-filler text-[16px] font-semibold mb-2'
+                    className='text-cyber text-[16px] font-semibold mb-2'
                 >
                     Relevant Projects
                 </span>
@@ -151,12 +155,12 @@ function CompanyProject({company}){
 function ProjectPoint({project}){
     if(project.url)
         return (
-            <li className='text-white-100 text-[14px] text-justify pl-1 mb-2 tracking-wider'>
-                <a className='text-bold text-blue-500' target='_blank' href={project.url}> {project.title}</a> {project.description}
+            <li className='text-muted text-[14px] text-justify pl-1 mb-2 tracking-wider'>
+                <a className='font-bold text-cyber hover:text-neutral' target='_blank' rel='noreferrer' href={project.url}> {project.title}</a> {project.description}
             </li>
         );
     return (
-        <li className='text-white-100 text-[14px] text-justify pl-1 mb-2 tracking-wider'>
+        <li className='text-muted text-[14px] text-justify pl-1 mb-2 tracking-wider'>
             <strong className='capitalize'>{project.title}</strong> {project.description}
         </li>
     );

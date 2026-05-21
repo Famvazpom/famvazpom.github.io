@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
 import { socials,words } from '../../constants';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 function Presentacion() {
     const [displayedText, setDisplayedText] = useState('');
@@ -56,38 +58,56 @@ function Presentacion() {
 
 
     return (
-        <section>
-            <div className='flex flex-col sm:flex-row w-screen h-screen bg-cover bg-center relative' style={{ backgroundImage: "url('assets/images/overlay-bg.jpg')"}}>
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
-                <div className="flex w-full sm:w-4/6 justify-center items-center">
-                    <div className='p-3 sm:p-0 text-center'>
+        <section className='relative min-h-screen overflow-hidden bg-primary'>
+            <div className='absolute inset-0 bg-cover bg-center opacity-30' style={{ backgroundImage: "url('assets/images/overlay-bg.jpg')"}} />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(124,60,255,0.4),transparent_28rem),radial-gradient(circle_at_80%_30%,rgba(20,241,255,0.28),transparent_26rem),linear-gradient(180deg,rgba(8,10,18,0.3),#080a12)]"></div>
+            <div className='absolute inset-0 cyber-grid opacity-30' />
+            <div className='relative flex min-h-screen w-screen flex-col items-center justify-center gap-10 px-8 py-24 sm:flex-row lg:px-20'>
+                <div className="flex w-full justify-center sm:w-7/12 sm:justify-start">
+                    <div className='max-w-4xl text-center sm:text-left'>
                         <motion.div
                             initial={{ x: "-100%" }}
                             animate={{ x: "0%" }}
                             transition={{ duration: 1 }}
-                            className=''
-                            style={{minHeight: "150px",}}
+                            className='glass-card p-6 sm:p-10'
                         >
-                            <p className='text-8xl' >HI! I'M NOE </p>
-                            <p className='text-5xl'>
+                            <p className='mb-4 text-sm font-bold uppercase tracking-[0.45em] text-cyber'>Software Engineer / Tech Lead</p>
+                            <h1 className='text-5xl font-black leading-none tracking-tight sm:text-7xl lg:text-8xl'>
+                                HI, I'M <span className='bg-gradient-to-r from-cyber via-neutral to-secondary bg-clip-text text-transparent'>NOE</span>
+                            </h1>
+                            <p className='mt-5 min-h-[3.5rem] text-3xl font-bold text-neutral sm:text-5xl'>
                                 {displayedText}
                             </p>
+                            <p className='mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg'>
+                                I build scalable cloud products, AI-powered workflows and full-stack systems with a clean architecture mindset.
+                            </p>
+                            <div className='mt-8 flex flex-col justify-center gap-4 sm:flex-row sm:justify-start'>
+                                <HashLink smooth to='#projects' className='danger-button'>View Projects</HashLink>
+                                <HashLink smooth to='#contact' className='glow-button'>Contact Me</HashLink>
+                                <Link to="https://drive.google.com/file/d/1D0GfzlTJxpNX0ksoFJZwpYyRptDBQkbz/view?usp=sharing" target="_blank" className='glow-button'>Resume</Link>
+                            </div>
                         </motion.div>
                     </div>
                 </div>
 
-                <div className="sm:w-2/6 flex items-center">
+                <div className="flex w-full items-center justify-center sm:w-5/12">
                     <motion.div
                         initial={{ x: "100%" }}
                         animate={{ x: "0%" }}
                         transition={{ duration: 1 }}
-                        className=''
+                        className='relative'
                     >
-                        <img className='w-full h-full p-2 rounded-full' src='assets/images/profile.png' />
+                        <div className='absolute -inset-6 rounded-full bg-gradient-to-r from-cyber via-complementary to-secondary opacity-60 blur-3xl' />
+                        <div className='relative rounded-full border border-cyber/40 bg-white/10 p-3 shadow-violet backdrop-blur-xl'>
+                            <img className='h-72 w-72 rounded-full object-cover sm:h-96 sm:w-96' src='assets/images/profile.png' alt='Noe Vazquez profile' />
+                        </div>
                     </motion.div>
                 </div>
             </div>
-            <div className='hidden md:flex md:flex-col absolute right-0 top-[30%] bg-secondary rounded-l-xl'>
+            <div className='absolute bottom-6 left-1/2 hidden -translate-x-1/2 rounded-full border border-cyber/30 bg-white/5 px-5 py-2 text-xs uppercase tracking-[0.35em] text-cyber shadow-glow backdrop-blur md:block'>
+                Scroll to explore
+            </div>
+            <div className='absolute right-0 top-[30%] hidden overflow-hidden rounded-l-2xl border border-r-0 border-cyber/30 bg-primary/70 shadow-glow backdrop-blur md:flex md:flex-col'>
                 {
                     socials.map((social,index) => <SocialButtons key={`social-${index}`} social={social}/>)
                 }
@@ -100,8 +120,8 @@ function Presentacion() {
 function SocialButtons({social})
 {
     return (
-        <a className='flex bg-secondary group' href={social.url} target='_blank'>
-            {<social.icon size={50} />}
+        <a className='group relative flex p-3 text-neutral transition-all duration-300 hover:bg-cyber/10 hover:text-cyber' href={social.url} target='_blank' rel='noreferrer'>
+            {<social.icon size={38} />}
             <span className='social-tooltip group-hover:scale-100'>
                 {social.text}
             </span>

@@ -59,64 +59,76 @@ function Contacto() {
   };
   return (
 
-    <div id="contact" className="pattern" >
-      <div className='mb-5'>
-        <h1 className="text-center text-4xl separator-line">
-        Lets get in touch!
+    <section id="contact" className="section-shell pattern" >
+      <div className='mb-8'>
+        <p className='section-kicker'>Start co-op mode</p>
+        <h1 className="section-title">
+        Lets get in touch
         </h1>
       </div>
-      <div className='flex flex-col sm:flex-row p-8 '>
-        <div className="sm:px-40 w-full  ">
+      <div className='mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.2fr]'>
+        <div className='glass-card p-8'>
+          <p className='text-sm uppercase tracking-[0.35em] text-cyber'>Available for</p>
+          <h2 className='mt-4 text-3xl font-black'>Architecture, AI and full-stack missions.</h2>
+          <p className='mt-5 leading-8 text-muted'>
+            Send me a message if you need a tech lead, a senior engineer, or someone to turn a complex idea into a maintainable product.
+          </p>
+          <div className='mt-8 rounded-2xl border border-secondary/30 bg-secondary/10 p-5'>
+            <p className='text-sm font-bold uppercase tracking-[0.25em] text-secondary'>Email</p>
+            <p className='mt-2 text-lg font-bold'>famvazpom@gmail.com</p>
+          </div>
+        </div>
+        <div className="glass-card w-full p-6 sm:p-8">
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className='mt-12 flex flex-col'
+            className='flex flex-col'
           >
             <label className='flex flex-col p-2'>
-              <span className='text-white font-medium mb-4'>Name</span>
+              <span className='mb-3 font-bold text-neutral'>Name</span>
               <input
                 type='text'
                 name='name'
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Your name"
-                className='bg-tertiary py-4 px-6 placeholder:text-third text-white rounded-lg outline-none border-none font-medium'
+                className='rounded-2xl border border-white/10 bg-primary/70 px-6 py-4 font-medium text-white outline-none transition-all duration-300 placeholder:text-muted focus:border-cyber focus:shadow-glow'
               />
             </label>
             <label className='flex flex-col p-2'>
-              <span className='text-white font-medium mb-4'>Mail</span>
+              <span className='mb-3 font-bold text-neutral'>Mail</span>
               <input
                 type='email'
                 name='email'
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Mail"
-                className='bg-tertiary py-4 px-6 placeholder:text-third text-white rounded-lg outline-none border-none font-medium'
+                className='rounded-2xl border border-white/10 bg-primary/70 px-6 py-4 font-medium text-white outline-none transition-all duration-300 placeholder:text-muted focus:border-cyber focus:shadow-glow'
               />
             </label>
             <label className='flex flex-col p-2'>
-              <span className='text-white font-medium mb-4'>Message</span>
+              <span className='mb-3 font-bold text-neutral'>Message</span>
               <textarea
                 rows={7}
                 name='message'
                 value={form.message}
                 onChange={handleChange}
                 placeholder='Something you want to tell me?'
-                className='bg-tertiary py-4 px-6 placeholder:text-third text-white rounded-lg outline-none border-none font-medium'
+                className='rounded-2xl border border-white/10 bg-primary/70 px-6 py-4 font-medium text-white outline-none transition-all duration-300 placeholder:text-muted focus:border-cyber focus:shadow-glow'
               />
             </label>
 
             <button
               type='submit'
-              className={`bg-complementary text-2xl w-fit p-2 mt-2 rounded-md shadow-md hover:shadow-2xl cursor-pointer `}
+              className={`danger-button mt-4 w-fit disabled:cursor-not-allowed disabled:opacity-60`}
               disabled={loading ? true : false}
             >
-              Send
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

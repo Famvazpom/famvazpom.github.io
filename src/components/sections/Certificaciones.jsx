@@ -14,16 +14,17 @@ function Certificaciones() {
         slidesToScroll: 1
     };
     return (
-        <section id='certificates' className='px-8 mt-8'>
-            <div className='mb-5'>
-                <h1 className="text-center text-4xl separator-line">
+        <section id='certificates' className='section-shell bg-primary'>
+            <div className='mb-10'>
+                <p className='section-kicker'>Unlocked badges</p>
+                <h1 className="section-title">
                     Certifications and Completion Badges
                 </h1>
-                <h2 className='text-center text-2xl font-light'>
+                <h2 className='text-center text-xl font-light text-muted'>
                     Certifications and Badges I have obtained so far.
                 </h2>
             </div>
-            <div className='mb-8 p-5'>
+            <div className='mx-auto mb-8 max-w-5xl glass-card p-6 sm:p-10'>
                 <Slider {...settings}>
 
                     {
@@ -39,12 +40,15 @@ function Certificaciones() {
 function CertificationItem({ certificacion }) {
     return (
         
-            <div className='flex flex-row sm:flex-col items-center object-center justify-center'>
-                <div className='sm:w-1/6'>
-                    <img className='w-full h-full p-2 rounded-md object-contain' src={certificacion.image} />
+            <div className='flex flex-col items-center justify-center gap-6 px-4 py-8 text-center'>
+                <div className='w-44 rounded-3xl border border-cyber/20 bg-white p-4 shadow-glow'>
+                    <img className='h-full w-full rounded-2xl object-contain' src={certificacion.image} alt={certificacion.name} />
                 </div>
-                <div className='text-center'>
-                    {certificacion.name} - Link to <a className='bg-complementary w-fit p-1 rounded-md shadow-md hover:shadow-2xl cursor-pointer ' href={certificacion.url} target='_blank' >prove</a>
+                <div className='max-w-2xl text-lg font-bold text-neutral'>
+                    {certificacion.name}
+                    <div className='mt-5'>
+                        <a className='glow-button' href={certificacion.url} target='_blank' rel='noreferrer'>View credential</a>
+                    </div>
                 </div>
             </div>
         
