@@ -1,8 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { LanguageContext } from "../../context/LanguageContext";
 
 
 function Contacto() {
+  const { t } = useContext(LanguageContext);
 
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -43,7 +45,7 @@ function Contacto() {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you, I will contact you as soon as possible..");
+          alert(t('contact.success'));
 
           setForm({
             name: "",
@@ -53,7 +55,7 @@ function Contacto() {
         },
         (error) => {
           setLoading(false);
-          alert("Somethin went wrong... Please try again later");
+          alert(t('contact.error'));
         }
       );
   };
@@ -61,17 +63,17 @@ function Contacto() {
 
     <section id="contact" className="section-shell pattern" >
       <div className='mb-8'>
-        <p className='section-kicker'>Start co-op mode</p>
+        <p className='section-kicker'>{t('contact.kicker')}</p>
         <h1 className="section-title">
-        Lets get in touch
+          {t('contact.title')}
         </h1>
       </div>
       <div className='mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.2fr]'>
         <div className='glass-card p-8'>
-          <p className='text-sm uppercase tracking-[0.35em] text-cyber'>Available for</p>
-          <h2 className='mt-4 text-3xl font-black'>Architecture, AI and full-stack missions.</h2>
+          <p className='text-sm uppercase tracking-[0.35em] text-cyber'>{t('contact.available')}</p>
+          <h2 className='mt-4 text-3xl font-black'>{t('contact.mission')}</h2>
           <p className='mt-5 leading-8 text-muted'>
-            Send me a message if you need a tech lead, a senior engineer, or someone to turn a complex idea into a maintainable product.
+            {t('contact.description')}
           </p>
           <div className='mt-8 rounded-2xl border border-secondary/30 bg-secondary/10 p-5'>
             <p className='text-sm font-bold uppercase tracking-[0.25em] text-secondary'>Email</p>
@@ -85,35 +87,35 @@ function Contacto() {
             className='flex flex-col'
           >
             <label className='flex flex-col p-2'>
-              <span className='mb-3 font-bold text-neutral'>Name</span>
+              <span className='mb-3 font-bold text-neutral'>{t('contact.name')}</span>
               <input
                 type='text'
                 name='name'
                 value={form.name}
                 onChange={handleChange}
-                placeholder="Your name"
+                placeholder={t('contact.namePlaceholder')}
                 className='rounded-2xl border border-white/10 bg-primary/70 px-6 py-4 font-medium text-white outline-none transition-all duration-300 placeholder:text-muted focus:border-cyber focus:shadow-glow'
               />
             </label>
             <label className='flex flex-col p-2'>
-              <span className='mb-3 font-bold text-neutral'>Mail</span>
+              <span className='mb-3 font-bold text-neutral'>{t('contact.mail')}</span>
               <input
                 type='email'
                 name='email'
                 value={form.email}
                 onChange={handleChange}
-                placeholder="Mail"
+                placeholder={t('contact.mail')}
                 className='rounded-2xl border border-white/10 bg-primary/70 px-6 py-4 font-medium text-white outline-none transition-all duration-300 placeholder:text-muted focus:border-cyber focus:shadow-glow'
               />
             </label>
             <label className='flex flex-col p-2'>
-              <span className='mb-3 font-bold text-neutral'>Message</span>
+              <span className='mb-3 font-bold text-neutral'>{t('contact.message')}</span>
               <textarea
                 rows={7}
                 name='message'
                 value={form.message}
                 onChange={handleChange}
-                placeholder='Something you want to tell me?'
+                placeholder={t('contact.messagePlaceholder')}
                 className='rounded-2xl border border-white/10 bg-primary/70 px-6 py-4 font-medium text-white outline-none transition-all duration-300 placeholder:text-muted focus:border-cyber focus:shadow-glow'
               />
             </label>
@@ -123,7 +125,7 @@ function Contacto() {
               className={`danger-button mt-4 w-fit disabled:cursor-not-allowed disabled:opacity-60`}
               disabled={loading ? true : false}
             >
-              {loading ? 'Sending...' : 'Send Message'}
+              {loading ? t('contact.sending') : t('contact.send')}
             </button>
           </form>
         </div>

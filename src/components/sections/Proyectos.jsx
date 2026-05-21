@@ -1,19 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { projects } from '../../constants'
 import { CompanyTech } from './Experiencia'
 import { motion } from 'framer-motion';
+import { LanguageContext } from '../../context/LanguageContext';
 
 
 function Proyectos() {
+  const { t } = useContext(LanguageContext);
   return (
     <section id="projects" className='section-shell flex flex-col pattern'>
       <div className='mb-10'>
-        <p className='section-kicker'>Build archive</p>
+        <p className='section-kicker'>{t('projects.kicker')}</p>
         <h1 className="section-title">
-          Projects
+          {t('projects.title')}
         </h1>
         <h2 className='text-center text-xl font-light text-muted'>
-          Some of my projects.
+          {t('projects.subtitle')}
         </h2>
       </div>
       <div className='mx-auto flex max-w-7xl flex-col gap-10'>
@@ -72,22 +74,28 @@ function ProjectLinks({ link }) {
   )
 }
 function ProjectSpecs({ project }) {
+  const { t } = useContext(LanguageContext);
+  const translatedProject = t(`projects.items.${project.name}`);
+  const description = translatedProject.description ?? project.descripcion;
+  const specs = translatedProject.specs ?? project.specs;
+  const role = t(`projects.roles.${project.rol}`);
+
   if(project.specs)
     return (
     <div className='p-2 leading-8'>
-        <span className='font-bold text-cyber'>{project.rol}</span> <br/>
-        {project.descripcion}
+        <span className='font-bold text-cyber'>{role}</span> <br/>
+        {description}
         <ul className='ml-5 mt-4 list-disc space-y-2'>
           {
-            project.specs.map((spec, index) => <ProjectSpec key={`project-spec-${index}`} spec={spec} />)
+            specs.map((spec, index) => <ProjectSpec key={`project-spec-${index}`} spec={spec} />)
           }
         </ul>
     </div>
     )
   return (
     <div className='p-2 leading-8'>
-        <span className='font-bold text-cyber'>{project.rol}</span> <br/>
-        {project.descripcion}
+        <span className='font-bold text-cyber'>{role}</span> <br/>
+        {description}
     </div>
   )
 }

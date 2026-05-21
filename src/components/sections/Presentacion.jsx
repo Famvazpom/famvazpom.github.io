@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { motion } from 'framer-motion';
-import { socials,words } from '../../constants';
+import { socials } from '../../constants';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
+import { LanguageContext } from '../../context/LanguageContext';
 
 function Presentacion() {
+    const { t, language } = useContext(LanguageContext);
+    const words = t('hero.words');
     const [displayedText, setDisplayedText] = useState('');
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [isTyping, setIsTyping] = useState(true);
@@ -16,6 +19,13 @@ function Presentacion() {
         }
         return text
     }
+
+    useEffect(() => {
+        setDisplayedText('');
+        setCurrentWordIndex(0);
+        setIsTyping(true);
+        setIsClearing(false);
+    }, [language]);
 
     useEffect(() => {
         const currentWord = words[currentWordIndex];
@@ -52,7 +62,7 @@ function Presentacion() {
         }
     
         return () => clearInterval(timeoutId); // Clean up interval on component unmount
-      }, [isTyping, isClearing, currentWordIndex]);
+      }, [isTyping, isClearing, currentWordIndex, words]);
 
 
 
@@ -73,18 +83,18 @@ function Presentacion() {
                         >
                             <p className='mb-4 text-sm font-bold uppercase tracking-[0.45em] text-cyber'>Software Engineer / Tech Lead</p>
                             <h1 className='text-5xl font-black leading-none tracking-tight sm:text-7xl lg:text-8xl'>
-                                HI, I'M <span className='bg-gradient-to-r from-cyber via-neutral to-secondary bg-clip-text text-transparent'>NOE</span>
+                                {t('hero.greeting')} <span className='bg-gradient-to-r from-cyber via-neutral to-secondary bg-clip-text text-transparent'>NOE</span>
                             </h1>
                             <p className='mt-5 min-h-[3.5rem] text-3xl font-bold text-neutral sm:text-5xl'>
                                 {displayedText}
                             </p>
                             <p className='mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg'>
-                                I build scalable cloud products, AI-powered workflows and full-stack systems with a clean architecture mindset.
+                                {t('hero.description')}
                             </p>
                             <div className='mt-8 flex flex-col justify-center gap-4 sm:flex-row sm:justify-start'>
-                                <HashLink smooth to='#projects' className='danger-button'>View Projects</HashLink>
-                                <HashLink smooth to='#contact' className='glow-button'>Contact Me</HashLink>
-                                <Link to="https://drive.google.com/file/d/1D0GfzlTJxpNX0ksoFJZwpYyRptDBQkbz/view?usp=sharing" target="_blank" className='glow-button'>Resume</Link>
+                                <HashLink smooth to='#projects' className='danger-button'>{t('hero.projects')}</HashLink>
+                                <HashLink smooth to='#contact' className='glow-button'>{t('hero.contact')}</HashLink>
+                                <Link to="https://drive.google.com/file/d/1D0GfzlTJxpNX0ksoFJZwpYyRptDBQkbz/view?usp=sharing" target="_blank" className='glow-button'>{t('hero.resume')}</Link>
                             </div>
                         </motion.div>
                     </div>
@@ -105,7 +115,7 @@ function Presentacion() {
                 </div>
             </div>
             <div className='absolute bottom-6 left-1/2 hidden -translate-x-1/2 rounded-full border border-cyber/30 bg-white/5 px-5 py-2 text-xs uppercase tracking-[0.35em] text-cyber shadow-glow backdrop-blur md:block'>
-                Scroll to explore
+                {t('hero.scroll')}
             </div>
             <div className='absolute right-0 top-[30%] hidden overflow-hidden rounded-l-2xl border border-r-0 border-cyber/30 bg-primary/70 shadow-glow backdrop-blur md:flex md:flex-col'>
                 {

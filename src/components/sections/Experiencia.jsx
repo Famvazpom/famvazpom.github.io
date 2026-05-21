@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { work_xp } from '../../constants';
+import { LanguageContext } from '../../context/LanguageContext';
 import {
     VerticalTimeline,
     VerticalTimelineElement,
@@ -10,15 +11,16 @@ import { MdLocationOn } from "react-icons/md";
 
 
 function Experiencia() {
+    const { t } = useContext(LanguageContext);
     return (
         <section id='work-experience' className='section-shell flex flex-col pattern'>
             <div className='mb-5'>
-                <p className='section-kicker'>Quest log</p>
+                <p className='section-kicker'>{t('experience.kicker')}</p>
                 <h1 className="section-title">
-                    Work Experience
+                    {t('experience.title')}
                 </h1>
                 <h2 className='text-center text-xl font-light text-muted'>
-                    What have I done so far?
+                    {t('experience.subtitle')}
                 </h2>
             </div>
 
@@ -40,6 +42,7 @@ function Experiencia() {
 
 
 function TimeLineObject({ company }) {
+    const { t } = useContext(LanguageContext);
     return (
         <VerticalTimelineElement
             contentStyle={{
@@ -91,7 +94,7 @@ function TimeLineObject({ company }) {
             <CompanyProject company={company} />
 
             <span className='p-2 font-bold capitalize text-cyber'>
-                Used techs:
+                {t('experience.usedTechs')}
             </span>
             <div className='flex flex-wrap'>
                 {
@@ -134,6 +137,7 @@ function CompanyTech({ tech }) {
 }
 
 function CompanyProject({company}){
+    const { t } = useContext(LanguageContext);
     if(company.projects)
     {
         return (
@@ -141,7 +145,7 @@ function CompanyProject({company}){
                 <span
                     className='text-cyber text-[16px] font-semibold mb-2'
                 >
-                    Relevant Projects
+                    {t('experience.relevantProjects')}
                 </span>
                 {
                     company.projects.map((project, index) => <ProjectPoint key={`project-${index}`} project={project} id={index} />)
