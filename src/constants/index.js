@@ -650,7 +650,13 @@ const projects = [
                 bgcolor: "bg-gray-500",
             },
         ],
-        links: []
+        links: [
+            {
+                icon: MdOutlineWebAsset,
+                link: 'https://a-dike.web.app',
+                name: 'Web Site',
+            },
+        ]
     },
     {
         name: 'TUUM',
