@@ -36,7 +36,7 @@ function ProjectCard({ project,id }) {
       transition={{ duration: 1 }}
       className=''
     >
-      <div className='glass-card group flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyber/40 hover:shadow-glow md:flex-row'>
+      <div className='glass-card group flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-cyber/40 md:flex-row'>
 
         <div className='relative min-h-[240px] overflow-hidden bg-primary md:w-5/12'>
           <div className='absolute inset-0 bg-gradient-to-br from-cyber/20 via-transparent to-secondary/20 opacity-80' />
@@ -66,8 +66,13 @@ function ProjectCard({ project,id }) {
 }
 
 function ProjectLinks({ link }) {
+  const isGithub = link.name.toLowerCase().includes('github');
+  const linkColor = isGithub
+    ? 'border-blue-400/50 bg-blue-500/10 text-blue-300 hover:border-blue-400 hover:bg-blue-500 hover:text-white'
+    : 'border-emerald-400/50 bg-emerald-500/10 text-emerald-300 hover:border-emerald-400 hover:bg-emerald-500 hover:text-white';
+
   return (
-    <a href={link.link} target='_blank' rel='noreferrer' className='flex min-w-24 flex-col items-center rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-cyber transition-all duration-300 hover:border-cyber/60 hover:bg-cyber hover:text-primary hover:shadow-glow md:w-full'>
+    <a href={link.link} target='_blank' rel='noreferrer' className={`flex min-w-24 flex-col items-center rounded-2xl border px-4 py-4 transition-all duration-300 md:w-full ${linkColor}`}>
       {<link.icon size='32' />}
       <span className='mt-2 whitespace-nowrap text-center text-[10px] font-bold uppercase tracking-widest'>{link.name}</span>
     </a >

@@ -89,28 +89,6 @@ const work_xp = [
                 bgcolor: "bg-purple-600",
             },
         ],
-        points: [
-            {
-                title: "Architecture & Technical Leadership:",
-                description: "Led the architectural design of scalable, modular, cloud-based systems using FastAPI, Django, NestJS, React, Next.js, PostgreSQL, and Firestore. Defined technical roadmaps, estimations, sprint planning, and coordinated multidisciplinary teams."
-            },
-            {
-                title: "Code Quality & Engineering Standards:",
-                description: "Conducted code reviews ensuring compliance with SOLID principles, Clean Architecture, design patterns, and coding standards."
-            },
-            {
-                title: "Backend & Frontend Development:",
-                description: "Developed backend services with NestJS, TypeORM, and PostgreSQL, including authentication with JWT, OAuth2, and Azure SSO. Built frontend applications using React, Next.js, Vite, Redux, TailwindCSS, and Material-UI."
-            },
-            {
-                title: "Enterprise Integrations & ETL:",
-                description: "Created ETL processes in C#/.NET for SAP integrations, three-way matching workflows, user and permission management, and notifications."
-            },
-            {
-                title: "DevOps & Delivery:",
-                description: "Implemented Git Flow, CI/CD pipelines, code quality rules, and documentation standards. Standardized version control and release management, improving software stability and traceability."
-            }
-        ]
     },
     // Python AI Developer
     {
@@ -160,28 +138,6 @@ const work_xp = [
                 icon: SiDotnet,
                 bgcolor: "bg-purple-600",
             },
-        ],
-        points: [
-            {
-                title: "AI / LLM & RAG Systems:",
-                description: "Developed and integrated AI/LLM solutions using Python with OpenAI, Llama, Hugging Face, and open-source models for classification, information extraction, OCR, and RAG pipelines."
-            },
-            {
-                title: "RAG Monitoring & Optimization:",
-                description: "Implemented monitoring KPIs for RAG systems, including hallucination rate, response latency, and token consumption."
-            },
-            {
-                title: "OCR & Intelligent Data Pipelines:",
-                description: "Built OCR + AI pipelines using Python, Azure OpenAI, and TypeScript for structured data extraction."
-            },
-            {
-                title: "AI Orchestration & Cost Optimization:",
-                description: "Integrated an AI Orchestrator for dynamic model selection, intelligent routing, and fallback logic, reducing operational costs and optimizing token usage across multiple AI providers."
-            },
-            {
-                title: "Key Achievements:",
-                description: "Improved ML model accuracy from 12% to 85% and detected unauthorized usage, significantly reducing recurring cloud costs."
-            }
         ]
     },
     {
@@ -227,24 +183,6 @@ const work_xp = [
                 bgcolor: "bg-blue-500",
             },
         ],
-        points: [
-            {
-                title: "Backend Systems Development:",
-                description: "Designed and developed backend systems using Python, Django, and Django Rest Framework for POS applications and administrative management platforms."
-            },
-            {
-                title: "Cloud Deployment & Infrastructure:",
-                description: "Deployed and managed workloads on Azure App Service, Azure Virtual Machines, and PythonAnywhere, ensuring system availability and scalability."
-            },
-            {
-                title: "AI & Automation Solutions:",
-                description: "Built AI-driven solutions using NLTK, Transformers, and supervised Machine Learning models for customer support automation and inventory demand prediction."
-            },
-            {
-                title: "Multi-Branch Business Modules:",
-                description: "Implemented multi-branch modules including reporting, invoicing, permissions management, auditing, and service order tracking."
-            }
-        ]
     },
     {
         title: "Project Leader and Main Developer",
@@ -289,24 +227,7 @@ const work_xp = [
                 bgcolor: "bg-blue-500",
             },
         ],
-        points: [
-            {
-                title: "Repair Shop & Inventory System:",
-                description: "Developed a repair shop and inventory management system using Django, Django Rest Framework, PostgreSQL, HTML, CSS, and JavaScript."
-            },
-            {
-                title: "Core Business Modules:",
-                description: "Built key modules including service orders, spare parts inventory, commissions, reporting, and role-based access control (RBAC)."
-            },
-            {
-                title: "Cloud Deployment & Databases:",
-                description: "Deployed system instances using MySQL and cloud infrastructure on Azure and PythonAnywhere."
-            },
-            {
-                title: "Multi-Tenant Architecture:",
-                description: "Implemented a multi-tenant architecture enabling licensed, isolated environments per customer."
-            }
-        ]
+        
     },
     {
         title: "Project Leader and Main Developer",
@@ -351,24 +272,7 @@ const work_xp = [
                 bgcolor: "bg-blue-500",
             },
         ],
-        points: [
-            {
-                title: "Repair Shop & Inventory System:",
-                description: "Developed a repair shop and inventory control system using Django, Django Rest Framework, PostgreSQL, HTML, CSS, and JavaScript."
-            },
-            {
-                title: "Functional Business Modules:",
-                description: "Implemented core modules such as service orders, spare parts inventory, commissions, reporting, and role-based access control (RBAC)."
-            },
-            {
-                title: "Cloud Deployment & Infrastructure:",
-                description: "Deployed system instances using MySQL and cloud services including Azure, AWS, and PythonAnywhere."
-            },
-            {
-                title: "System Support & Maintenance:",
-                description: "Provided support and maintenance for the existing system architecture, ensuring stability and operational continuity."
-            }
-        ]
+        
     }
 ];
 

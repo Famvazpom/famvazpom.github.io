@@ -9,7 +9,7 @@ function LanguageToggle() {
         <button
             type='button'
             onClick={toggleLanguage}
-            className='fixed right-4 top-4 z-[60] rounded-full border border-cyber/50 bg-primary/80 px-4 py-2 text-sm font-black uppercase tracking-widest text-cyber shadow-glow backdrop-blur-xl transition-all duration-300 hover:border-cyber hover:bg-cyber hover:text-primary'
+            className='fixed right-4 top-4 z-[60] rounded-full border border-cyber/50 bg-primary/80 px-4 py-2 text-sm font-black uppercase tracking-widest text-cyber backdrop-blur-xl transition-all duration-300 hover:border-cyber hover:bg-cyber hover:text-white'
             aria-label={`Switch language to ${nextLanguage}`}
         >
             {nextLanguage}

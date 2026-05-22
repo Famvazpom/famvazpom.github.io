@@ -11,10 +11,8 @@ function Sidebar() {
   const { setSidebar, isSidebarActive } = useContext(SidebarContext)
   const { t } = useContext(LanguageContext)
   return (
-    <div className={`fixed p-2 top-0 h-screen w-16 flex flex-col z-50 border-r border-cyber/20 bg-primary/70 text-white shadow-glow backdrop-blur-xl transition-all duration-300 ${isSidebarActive ? 'sidebar-inactive' : 'sidebar-active'} `}
+    <div className={`fixed p-2 top-0 h-screen w-16 flex flex-col z-50 border-r border-secondary/40 bg-secondary text-white backdrop-blur-xl transition-all duration-300 ${isSidebarActive ? 'sidebar-inactive' : 'sidebar-active'} `}
     >
-      <div className="absolute top-0 left-0 w-full h-full cyber-grid opacity-30" />
-      <div className="relative mb-4 mt-2 h-10 rounded-2xl border border-cyber/30 bg-cyber/10 shadow-glow" />
       <Crumbs />
       <SidebarIcon icon={<GiCharacter size="32" />} reference='#about-me' text={t('sidebar.about')} />
       <SidebarIcon icon={<GiBlackBook size="32" />} reference='#work-experience' text={t('sidebar.experience')} />

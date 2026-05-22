@@ -30,7 +30,8 @@ function Experiencia() {
                         work_xp.map(
                             (experience, index) =>
                                 <TimeLineObject key={`experience-${index}`}
-                                    company={experience} />
+                                    company={experience}
+                                    id={index} />
                         )
 
                     }
@@ -41,19 +42,23 @@ function Experiencia() {
 }
 
 
-function TimeLineObject({ company }) {
+function TimeLineObject({ company, id }) {
     const { t } = useContext(LanguageContext);
+    const translatedJob = t(`experience.jobs.${id}`);
+    const job = typeof translatedJob === 'object' ? translatedJob : {};
+    const points = job.points ?? company.points;
+
     return (
         <VerticalTimelineElement
             contentStyle={{
                 background: "rgba(16, 19, 33, 0.88)",
                 color: "#fff",
-                border: "1px solid rgba(20, 241, 255, 0.22)",
+                border: "1px solid rgba(239, 68, 68, 0.22)",
                 borderRadius: "24px",
-                boxShadow: "0 0 36px rgba(20, 241, 255, 0.12)",
+                boxShadow: "none",
             }}
-            contentArrowStyle={{ borderRight: "7px solid rgba(20, 241, 255, 0.35)" }}
-            date={company.date}
+            contentArrowStyle={{ borderRight: "7px solid rgba(239, 68, 68, 0.35)" }}
+            date={job.date ?? company.date}
             iconStyle={{ background: company.iconBg }}
             icon={
                 <div className='flex justify-center items-center w-full h-full rounded-full bg-white'>
@@ -66,7 +71,7 @@ function TimeLineObject({ company }) {
             }
         >
             <div className='border-b border-white/10 pb-4'>
-                <h3 className='text-neutral text-[24px] font-bold '>{company.title}</h3>
+                <h3 className='text-neutral text-[24px] font-bold '>{job.title ?? company.title}</h3>
                 <p
                     className='text-cyber text-[16px] font-semibold'
                     style={{ margin: (0,0,0,0) }}
@@ -75,23 +80,23 @@ function TimeLineObject({ company }) {
                 </p>
                 <span>
                     <div className='flex flex-row items-center'>
-                        <MdLocationOn className='mr-2' /> {company.location}
+                        <MdLocationOn className='mr-2' /> {job.location ?? company.location}
                     </div>
-                    {company.date}
+                    {job.date ?? company.date}
                 </span>
             </div>
             <div className='pb-4 border-b border-white/10'>
                 <ul className='mt-5 list-disc ml-5 space-y-2'>
-                    {company.points.map((point, index) => (
+                    {points.map((point, index) => (
                          <CompanyPoint
-                         key={`point-${index}-company-${company.company_name}`}
-                         point={point}
+                          key={`point-${index}-company-${company.company_name}`}
+                          point={point}
                      />
                     ))}
                 </ul>
             </div>
 
-            <CompanyProject company={company} />
+            <CompanyProject company={company} projects={job.projects} />
 
             <span className='p-2 font-bold capitalize text-cyber'>
                 {t('experience.usedTechs')}
@@ -136,9 +141,11 @@ function CompanyTech({ tech }) {
     );
 }
 
-function CompanyProject({company}){
+function CompanyProject({company, projects}){
     const { t } = useContext(LanguageContext);
-    if(company.projects)
+    const companyProjects = projects ?? company.projects;
+
+    if(companyProjects)
     {
         return (
             <div className='pb-4 border-b border-white/10 flex flex-col p-2'>
@@ -148,7 +155,7 @@ function CompanyProject({company}){
                     {t('experience.relevantProjects')}
                 </span>
                 {
-                    company.projects.map((project, index) => <ProjectPoint key={`project-${index}`} project={project} id={index} />)
+                    companyProjects.map((project, index) => <ProjectPoint key={`project-${index}`} project={project} id={index} />)
                 }
             </div>
         )

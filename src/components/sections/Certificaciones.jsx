@@ -44,13 +44,13 @@ function CertificationItem({ certificacion }) {
     return (
         
             <div className='flex flex-col items-center justify-center gap-6 px-4 py-8 text-center'>
-                <div className='w-44 rounded-3xl border border-cyber/20 bg-white p-4 shadow-glow'>
+                <div className='w-44 rounded-3xl border border-cyber/20 bg-white p-4'>
                     <img className='h-full w-full rounded-2xl object-contain' src={certificacion.image} alt={certificacion.name} />
                 </div>
                 <div className='max-w-2xl text-lg font-bold text-neutral'>
                     {certificacion.name}
                     <div className='mt-5'>
-                        <a className='glow-button' href={certificacion.url} target='_blank' rel='noreferrer'>{t('certifications.credential')}</a>
+                        <a className='inline-flex items-center justify-center rounded-2xl border border-emerald-400/50 bg-emerald-500/10 px-5 py-3 font-bold text-emerald-300 transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-500 hover:text-white' href={certificacion.url} target='_blank' rel='noreferrer'>{t('certifications.credential')}</a>
                     </div>
                 </div>
             </div>

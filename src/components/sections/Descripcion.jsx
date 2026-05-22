@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { techs } from '../../constants'
+import { socials, techs } from '../../constants'
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import { LanguageContext } from '../../context/LanguageContext';
@@ -49,17 +49,31 @@ function Descripcion() {
               </HashLink>
             </span>
           </p>
-          <div className='mt-8 flex flex-col gap-4 sm:flex-row'>
+          <div className='mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap'>
             <div>
               <HashLink smooth to="#contact" className='danger-button' >
                 {t('about.contact')}
               </HashLink>
             </div>
             <div>
-              <Link to="https://drive.google.com/file/d/1D0GfzlTJxpNX0ksoFJZwpYyRptDBQkbz/view?usp=sharing" target="_blank" download className='glow-button' >
+              <Link to="https://drive.google.com/file/d/1D0GfzlTJxpNX0ksoFJZwpYyRptDBQkbz/view?usp=sharing" target="_blank" download className='inline-flex items-center justify-center rounded-2xl border border-emerald-400/50 bg-emerald-500/10 px-5 py-3 font-bold text-emerald-300 transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-500 hover:text-white' >
                 {t('about.resume')}
               </Link>
             </div>
+            {socials.map((social, index) => (
+              <div key={`about-social-${index}`}>
+                <Link
+                  to={social.url}
+                  target="_blank"
+                  className={social.text === 'LinkedIn'
+                    ? 'inline-flex items-center justify-center gap-2 rounded-2xl border border-blue-400/50 bg-blue-500/10 px-5 py-3 font-bold text-blue-300 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:bg-blue-600 hover:text-white'
+                    : 'inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-5 py-3 font-bold text-neutral transition-all duration-300 hover:-translate-y-1 hover:border-cyber/60 hover:bg-cyber/15 hover:text-white'}
+                >
+                  {<social.icon size={22} />}
+                  {social.text}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
         <div className='glass-card flex flex-col p-6 sm:p-8'>

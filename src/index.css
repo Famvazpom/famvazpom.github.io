@@ -5,27 +5,27 @@
 @layer components {
   .sidebar-icon {
       @apply relative flex items-center justify-center h-12 w-12 my-2 rounded-2xl border border-white/10
-      bg-white/5 text-neutral shadow-lg backdrop-blur hover:border-cyber/70 hover:bg-cyber/10 hover:text-cyber hover:shadow-glow transition-all duration-300 cursor-pointer;
+      bg-white/20 text-white backdrop-blur hover:border-white hover:bg-white/30 hover:text-white transition-all duration-300 cursor-pointer;
   }
 
   .sidebar-tooltip
   {
-    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-glow text-neutral bg-surface/95 border border-cyber/30 text-xs font-bold transition-all duration-100 scale-0 origin-left;
+    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md text-neutral bg-surface/95 border border-cyber/30 text-xs font-bold transition-all duration-100 scale-0 origin-left;
   }
   
   .social-tooltip
   {
-    @apply absolute w-auto p-2 min-w-max right-14 rounded-md shadow-glow text-neutral bg-surface/95 border border-cyber/30 text-xs font-bold transition-all duration-100 scale-0 origin-right;
+    @apply absolute w-auto p-2 min-w-max right-14 rounded-md text-neutral bg-surface/95 border border-cyber/30 text-xs font-bold transition-all duration-100 scale-0 origin-right;
   }
 
   .crumbs-active
   {
-    @apply w-auto top-0 left-0 p-2 ml-14 min-w-max rounded-r-xl text-neutral bg-secondary text-xs font-bold transition-all duration-75 origin-left cursor-pointer shadow-danger;
+    @apply w-auto top-0 left-0 p-2 ml-14 min-w-max rounded-r-xl text-neutral bg-secondary text-xs font-bold transition-all duration-75 origin-left cursor-pointer;
 
   }
 
   .crumbs{
-    @apply  w-auto top-0 left-0 p-2 ml-[4rem] min-w-max rounded-r-xl text-neutral bg-secondary text-xs font-bold transition-all duration-100 origin-left cursor-pointer shadow-danger;
+    @apply  w-auto top-0 left-0 p-2 ml-[4rem] min-w-max rounded-r-xl text-neutral bg-secondary text-xs font-bold transition-all duration-100 origin-left cursor-pointer;
 
   }
 
@@ -39,11 +39,11 @@
 
   .separator-line
   {
-    @apply after:mx-auto after:content-[''] after:block after:h-1 after:rounded-full after:w-20 after:my-4 after:bg-gradient-to-r after:from-secondary after:via-complementary after:to-cyber;
+    @apply after:mx-auto after:content-[''] after:block after:h-1 after:rounded-full after:w-20 after:my-4 after:bg-secondary;
   }
   .separator-line-project
   {
-    @apply after:content-[''] after:block after:h-1 after:rounded-full after:w-32 after:my-3 after:bg-gradient-to-r after:from-cyber after:to-complementary;
+    @apply after:content-[''] after:block after:h-1 after:rounded-full after:w-32 after:my-3 after:bg-secondary;
   }
 
   .section-shell {
@@ -59,30 +59,36 @@
   }
 
   .glass-card {
-    @apply rounded-3xl border border-white/10 bg-white/[0.06] shadow-2xl backdrop-blur-xl;
+    @apply rounded-3xl border border-white/10 bg-white/[0.06] backdrop-blur-xl;
   }
 
   .glow-button {
-    @apply inline-flex items-center justify-center rounded-2xl border border-cyber/40 bg-cyber/10 px-5 py-3 font-bold text-cyber shadow-glow transition-all duration-300 hover:-translate-y-1 hover:bg-cyber hover:text-primary;
+    @apply inline-flex items-center justify-center rounded-2xl border border-cyber/40 bg-cyber/10 px-5 py-3 font-bold text-cyber transition-all duration-300 hover:-translate-y-1 hover:bg-cyber hover:text-primary;
   }
 
   .danger-button {
-    @apply inline-flex items-center justify-center rounded-2xl border border-secondary/50 bg-secondary px-5 py-3 font-bold text-neutral shadow-danger transition-all duration-300 hover:-translate-y-1 hover:bg-neutral hover:text-primary;
+    @apply inline-flex items-center justify-center rounded-2xl border border-secondary/50 bg-secondary px-5 py-3 font-bold text-neutral transition-all duration-300 hover:-translate-y-1 hover:border-red-500 hover:bg-red-700 hover:text-white;
   }
 
   .tech-pill {
-    @apply flex flex-row items-center rounded-full border border-white/10 px-3 py-2 text-sm font-semibold text-neutral shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-cyber/60 hover:shadow-glow;
+    @apply flex flex-row items-center rounded-full border border-white/10 px-3 py-2 text-sm font-semibold text-neutral transition-all duration-300 hover:-translate-y-1 hover:border-cyber/60;
   }
 }
 
 
 .pattern{
-    background-image: radial-gradient(circle at top left, rgba(124, 60, 255, 0.18), transparent 28rem), radial-gradient(circle at bottom right, rgba(20, 241, 255, 0.12), transparent 24rem), url('/assets/images/pattern.png');
-    background-size: cover, cover, 360px;
+    background-image: url('/assets/images/pattern.png');
+    background-size: 360px;
     background-attachment: fixed;
 }
 
-.cyber-grid {
-  background-image: linear-gradient(rgba(20, 241, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(20, 241, 255, 0.08) 1px, transparent 1px);
-  background-size: 44px 44px;
+.slick-dots li button:before {
+  color: #a9b3c9;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ef4444;
+  opacity: 1;
 }
